@@ -17,9 +17,7 @@ CREATE TABLE VOLUME(
 CREATE TABLE AUTORE(
     id INT PRIMARY KEY,
     nome char(50),
-    nazionalità char(20),
-
-
+    nazionalità char(20)
 );
 CREATE TABLE GENERE(
     id INT PRIMARY KEY,
