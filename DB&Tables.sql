@@ -20,7 +20,7 @@ CREATE TABLE SERIE(
 CREATE TABLE VOLUME(
     id INT auto_increment PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
-    possesso BOOL DEFAULT 0
+    possesso BOOL DEFAULT FALSE
 );
 
 -- Creazione tabella Autore
