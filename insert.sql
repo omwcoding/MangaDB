@@ -59,3 +59,10 @@ INSERT INTO volume (nome) VALUES
 ('Buonanotte, Punpun vol 13'),
 
 ('Look Back');
+
+INSERT INTO autore (nome, nazionalità) VALUES
+('Kentaro Miura', 'Japan'),
+('Inio Asano', 'Japan'),
+('Tatsuki Fujimoto', 'Japan'),
+('Go Nagai', 'Japan'),
+('Hiromu Arakawa', 'Japan');
