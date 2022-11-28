@@ -9,14 +9,20 @@ CREATE TABLE SERIE(
     id INT auto_increment PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     anno_pubblicazione INT DEFAULT NULL,
-    completato BIT DEFAULT NULL
+    completato BIT DEFAULT NULL,
+    FK_autore INT DEFAULT NULL,
+    FK_categoria INT DEFAULT NULL,
+    FK_genere INT DEFAULT NULL,
+    FOREIGN KEY (FK_autore) REFERENCES AUTORE(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (FK_categoria) REFERENCES CATEGORIA(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (FK_genere) REFERENCES GENERE(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- Creazione tabella Volume
 CREATE TABLE VOLUME(
     id INT auto_increment PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
-    possesso BOOL DEFAULT NULL
+    possesso BOOL DEFAULT 0
 );
 
 -- Creazione tabella Autore
