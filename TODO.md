@@ -6,6 +6,7 @@
         overwrite/update della stessa entità su tabella? vedere)
 5) Creare delle viste quindi dei filtri per vedere i miei manga
 
-Capire dove "storare" questo DB (host?)
-GUI per fare gli insert?
-Possibile APP? Pensarci..
+- Capire dove "storare" questo DB (host?)
+- GUI per fare gli insert?
+- Possibile APP? Pensarci..
+- Da quale source estrarre le informazioni?

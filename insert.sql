@@ -13,5 +13,3 @@ INSERT INTO categoria (nome) VALUES
 ('Shoujo'),
 ('Seinen'),
 ('Josei');
-
-
