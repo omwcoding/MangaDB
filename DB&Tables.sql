@@ -31,10 +31,9 @@ CREATE TABLE AUTORE(
 
 -- Creazione tabella Genere
 CREATE TABLE GENERE(
-    id INT PRIMARY KEY,
+    id INT auto_increment PRIMARY KEY,
     nome char(50),
     sottogenere char(50)
-
 );
 
 -- Creazione tabella Categoria
