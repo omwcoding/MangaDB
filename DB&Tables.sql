@@ -20,8 +20,8 @@ CREATE TABLE VOLUME(
     id INT auto_increment PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     possesso BOOL DEFAULT NULL,
-    prezzo FLOAT DEFAULT NULL,
-    prezzo_pagato DECIMAL(2,2) DEFAULT NULL
+    prezzo DECIMAL(4,2) DEFAULT 0,
+    prezzo_pagato DECIMAL(4,2) DEFAULT 0
 );
 
 -- Creazione tabella Autore

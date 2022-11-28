@@ -19,8 +19,8 @@ INSERT INTO categoria (nome) VALUES
 ('Josei');
 
 -- Inserisci tutti i volumi di una serie
-INSERT INTO volume (nome, prezzo) VALUES
-('Berserk vol 1', 5.20), 
+INSERT INTO volume (nome, possesso) VALUES
+('Berserk vol 1', 1), 
 ('Berserk vol 2'), 
 ('Berserk vol 3'), 
 ('Berserk vol 4'),
