@@ -19,9 +19,9 @@ CREATE TABLE SERIE(
 CREATE TABLE VOLUME(
     id INT auto_increment PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
-    possesso BIT DEFAULT NULL,
-    prezzo DECIMAL(2,2) NULL,
-    prezzo_pagato DECIMAL(2,2) NULL
+    possesso BOOL DEFAULT NULL,
+    prezzo FLOAT DEFAULT NULL,
+    prezzo_pagato DECIMAL(2,2) DEFAULT NULL
 );
 
 -- Creazione tabella Autore
