@@ -7,8 +7,8 @@ USE MangaDB;
 CREATE TABLE SERIE(
     id INT auto_increment PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
-    data_pubblicazione DATE,
-    completo BIT NULL,
+    anno_pubblicazione INT DEFAULT NULL,
+    completo BIT DEFAULT NULL,
     id_autore INT NULL,
     id_genere INT NULL,
     id_categoria INT NULL
@@ -17,8 +17,8 @@ CREATE TABLE SERIE(
 -- Creazione tabella Volume
 CREATE TABLE VOLUME(
     id INT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    prezzo DECIMAL(3,2) NULL,
+    nome VARCHAR(50) NOT NULL,
+    prezzo DECIMAL(3,2) NOT NULL
 );
 
 -- Creazione tabella Autore
@@ -38,6 +38,6 @@ CREATE TABLE GENERE(
 
 -- Creazione tabella Categoria
 CREATE TABLE CATEGORIA(
-    id INT PRIMARY KEY,
+    id INT auto_increment PRIMARY KEY,
     nome char(50)
 );
