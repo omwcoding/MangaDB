@@ -1,14 +1,14 @@
 USE MangaDB;
 
 -- Inserisci tutte le serie in tuo possesso (pensare se inserirne altre come "wishlist")
-INSERT INTO SERIE (nome, anno_pubblicazione, completato) VALUES 
-('Berserk', 1989, 0),
-('Buonanotte, Punpun', 2007, 1),
-('Devilman', 1972, 1),
-('Chainsaw Man', 2018, 0),
-('Tatsuki Fujimoto Short Stories', 2021, 1),
-('Fullmetal Alchemist', 2001, 1),
-('Look Back', 2021, 1);
+INSERT INTO SERIE (nome, anno_pubblicazione, terminato) VALUES 
+('Berserk', 1989),
+('Buonanotte, Punpun', 2007, TRUE),
+('Devilman', 1972, TRUE),
+('Chainsaw Man', 2018),
+('Tatsuki Fujimoto Short Stories', 2021, TRUE),
+('Fullmetal Alchemist', 2001, TRUE),
+('Look Back', 2021, TRUE);
 
 -- Categorie di manga (questi rimarranno fissi)
 INSERT INTO categoria (nome) VALUES 
@@ -24,10 +24,10 @@ INSERT INTO volume (nome, possesso) VALUES
 ('Berserk vol 9', TRUE), ('Berserk vol 10', TRUE), ('Berserk vol 11', TRUE), ('Berserk vol 12', TRUE),
 ('Berserk vol 13', TRUE), ('Berserk vol 14', TRUE), ('Berserk vol 15', TRUE), ('Berserk vol 16', TRUE), 
 ('Berserk vol 17', TRUE), ('Berserk vol 18', TRUE), ('Berserk vol 19', TRUE), ('Berserk vol 20', TRUE),
-('Berserk vol 22', TRUE), ('Berserk vol 23'), ('Berserk vol 24'), ('Berserk vol 25'),
-('Berserk vol 26'), ('Berserk vol 27'), ('Berserk vol 28'), ('Berserk vol 29'),
+('Berserk vol 22', TRUE), ('Berserk vol 23'), ('Berserk vol 24'), ('Berserk vol 25', TRUE),
+('Berserk vol 26'), ('Berserk vol 27'), ('Berserk vol 28', TRUE), ('Berserk vol 29'),
 ('Berserk vol 30'), ('Berserk vol 31'), ('Berserk vol 32'), ('Berserk vol 33'),
-('Berserk vol 34'), ('Berserk vol 35'), ('Berserk vol 36'), ('Berserk vol 37'),
+('Berserk vol 34'), ('Berserk vol 35'), ('Berserk vol 36'), ('Berserk vol 37', TRUE),
 ('Berserk vol 38'), ('Berserk vol 39'), ('Berserk vol 40', TRUE), ('Berserk vol 41'),
 
 ('Chainsaw Man vol 1', TRUE), ('Chainsaw Man vol 2', TRUE), ('Chainsaw Man vol 3', TRUE), ('Chainsaw Man vol 4', TRUE),

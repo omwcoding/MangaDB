@@ -10,7 +10,7 @@ CREATE TABLE SERIE(
     id INT auto_increment PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     anno_pubblicazione INT DEFAULT NULL,
-    completato BIT DEFAULT NULL,
+    terminato BOOL DEFAULT FALSE,
     
     FK_autore INT DEFAULT NULL,
     FK_categoria INT DEFAULT NULL,
