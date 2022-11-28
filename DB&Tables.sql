@@ -9,19 +9,14 @@ CREATE TABLE SERIE(
     id INT auto_increment PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     anno_pubblicazione INT DEFAULT NULL,
-    completo BIT DEFAULT NULL,
-    id_autore INT NULL,
-    id_genere INT NULL,
-    id_categoria INT NULL
+    completato BIT DEFAULT NULL
 );
 
 -- Creazione tabella Volume
 CREATE TABLE VOLUME(
     id INT auto_increment PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
-    possesso BOOL DEFAULT NULL,
-    prezzo DECIMAL(4,2) DEFAULT 0,
-    prezzo_pagato DECIMAL(4,2) DEFAULT 0
+    possesso BOOL DEFAULT NULL
 );
 
 -- Creazione tabella Autore
