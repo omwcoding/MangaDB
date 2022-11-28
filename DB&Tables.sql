@@ -8,6 +8,7 @@ CREATE TABLE SERIE(
     id INT auto_increment PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     data_pubblicazione DATE,
+    completo BIT NULL,
     id_autore INT NULL,
     id_genere INT NULL,
     id_categoria INT NULL
@@ -16,8 +17,8 @@ CREATE TABLE SERIE(
 -- Creazione tabella Volume
 CREATE TABLE VOLUME(
     id INT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
     prezzo DECIMAL(3,2) NULL,
-    id_autore INT NULL
 );
 
 -- Creazione tabella Autore
@@ -30,7 +31,8 @@ CREATE TABLE AUTORE(
 -- Creazione tabella Genere
 CREATE TABLE GENERE(
     id INT PRIMARY KEY,
-    nome char(20)
+    nome char(50),
+    sottogenere char(50)
 
 );
 
