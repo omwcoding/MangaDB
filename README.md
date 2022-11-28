@@ -2,6 +2,7 @@
 
 Piccolo progetto per la gestione di un database personale di manga.
 
-Next step:
+Next steps:
 - Setup database "MangaDB"
+- Interfaccia grafica (inserimento, filtri ecc)
  

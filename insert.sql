@@ -10,9 +10,6 @@ INSERT INTO SERIE (nome, anno_pubblicazione, completato) VALUES
 ('Fullmetal Alchemist', 2001, 1),
 ('Look Back', 2021, 1);
 
-
-
-
 -- Categorie di manga (questi rimarranno fissi)
 INSERT INTO categoria (nome) VALUES 
 ('Shonen'),
@@ -58,11 +55,20 @@ INSERT INTO volume (nome, possesso) VALUES
 ('Buonanotte, Punpun vol 10'), ('Buonanotte, Punpun vol 11'), ('Buonanotte, Punpun vol 12'),
 ('Buonanotte, Punpun vol 13'),
 
-('Look Back');
+('Look Back', TRUE);
 
+-- Inserimento autori (delle serie che inseriamo)
 INSERT INTO autore (nome, nazionalità) VALUES
 ('Kentaro Miura', 'Japan'),
 ('Inio Asano', 'Japan'),
 ('Tatsuki Fujimoto', 'Japan'),
 ('Go Nagai', 'Japan'),
 ('Hiromu Arakawa', 'Japan');
+
+-- Inserimento generi (vedere come sviluppare i sottogeneri e se ne servono altri)
+INSERT INTO genere (nome) VALUES
+('Action'), ('Adult'), ('Adventure'),
+('Comedy'), ('Drama'), ('Slice of Life'),
+('Fantasy'), ('Supernatural'), ('Horror'),
+('Psychological'), ('Sci'), ('Thriller'),
+('Sports'), ('Graphic Novel');
