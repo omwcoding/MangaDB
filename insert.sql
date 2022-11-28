@@ -1,6 +1,6 @@
 USE MangaDB;
 
--- Inserisci tutte le serie in tuo possesso (pensare di inserirne altre come "wishlist")
+-- Inserisci tutte le serie in tuo possesso (pensare se inserirne altre come "wishlist")
 INSERT INTO SERIE (nome, anno_pubblicazione, completato) VALUES 
 ('Berserk', 1989, 0),
 ('Buonanotte, Punpun', 2007, 1),
