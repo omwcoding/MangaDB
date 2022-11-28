@@ -17,14 +17,16 @@ CREATE TABLE SERIE(
 
 -- Creazione tabella Volume
 CREATE TABLE VOLUME(
-    id INT PRIMARY KEY,
+    id INT auto_increment PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
-    prezzo DECIMAL(3,2) NOT NULL
+    possesso BIT DEFAULT NULL,
+    prezzo DECIMAL(2,2) NULL,
+    prezzo_pagato DECIMAL(2,2) NULL
 );
 
 -- Creazione tabella Autore
 CREATE TABLE AUTORE(
-    id INT PRIMARY KEY,
+    id INT auto_increment PRIMARY KEY,
     nome char(50),
     nazionalità char(20)
 );
