@@ -10,6 +10,7 @@ CREATE TABLE SERIE(
     nome VARCHAR(50) NOT NULL,
     anno_pubblicazione INT DEFAULT NULL,
     completato BIT DEFAULT NULL,
+    
     FK_autore INT DEFAULT NULL,
     FK_categoria INT DEFAULT NULL,
     FK_genere INT DEFAULT NULL

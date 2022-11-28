@@ -21,8 +21,8 @@ INSERT INTO categoria (nome) VALUES
 ('Josei');
 
 -- Inserisci tutti i volumi di una serie inserita
-INSERT INTO volume (nome) VALUES
-('Berserk vol 1'), ('Berserk vol 2'), ('Berserk vol 3'), ('Berserk vol 4'),
+INSERT INTO volume (nome, possesso) VALUES
+('Berserk vol 1', 1), ('Berserk vol 2'), ('Berserk vol 3'), ('Berserk vol 4'),
 ('Berserk vol 5'), ('Berserk vol 6'), ('Berserk vol 7'), ('Berserk vol 8'),
 ('Berserk vol 9'), ('Berserk vol 10'), ('Berserk vol 11'), ('Berserk vol 12'),
 ('Berserk vol 13'), ('Berserk vol 14'), ('Berserk vol 15'), ('Berserk vol 16'), 
