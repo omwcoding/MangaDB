@@ -43,3 +43,10 @@ CREATE TABLE CATEGORIA(
     id INT auto_increment PRIMARY KEY,
     nome char(50)
 );
+
+--Creazione tabella Casa Editrice
+CREATE TABLE CASA_EDITRICE(
+    id INT auto_increment PRIMARY KEY,
+    nome varchar(50),
+    nazione varchar(30)
+)

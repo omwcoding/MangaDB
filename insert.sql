@@ -29,13 +29,10 @@ INSERT INTO volume (nome, possesso) VALUES
 ('Berserk vol 30'), ('Berserk vol 31'), ('Berserk vol 32'), ('Berserk vol 33'),
 ('Berserk vol 34'), ('Berserk vol 35'), ('Berserk vol 36'), ('Berserk vol 37', TRUE),
 ('Berserk vol 38'), ('Berserk vol 39'), ('Berserk vol 40', TRUE), ('Berserk vol 41'),
-
 ('Chainsaw Man vol 1', TRUE), ('Chainsaw Man vol 2', TRUE), ('Chainsaw Man vol 3', TRUE), ('Chainsaw Man vol 4', TRUE),
 ('Chainsaw Man vol 5', TRUE), ('Chainsaw Man vol 6', TRUE), ('Chainsaw Man vol 7', TRUE), ('Chainsaw Man vol 8', TRUE),
 ('Chainsaw Man vol 9', TRUE), ('Chainsaw Man vol 10', TRUE), ('Chainsaw Man vol 11', TRUE),
-
 ('Tatsuki Fujimoto Short Stories 17-21', TRUE), ('Tatsuki Fujimoto Short Stories 22-26', TRUE),
-
 ('Fullmetal Alchemist Deluxe vol 1', TRUE), ('Fullmetal Alchemist Deluxe vol 2', TRUE),
 ('Fullmetal Alchemist Deluxe vol 3', TRUE), ('Fullmetal Alchemist Deluxe vol 4', TRUE),
 ('Fullmetal Alchemist Deluxe vol 5', TRUE), ('Fullmetal Alchemist Deluxe vol 6', TRUE),
@@ -45,16 +42,13 @@ INSERT INTO volume (nome, possesso) VALUES
 ('Fullmetal Alchemist Deluxe vol 13'), ('Fullmetal Alchemist Deluxe vol 14'),
 ('Fullmetal Alchemist Deluxe vol 15'), ('Fullmetal Alchemist Deluxe vol 16'),
 ('Fullmetal Alchemist Deluxe vol 17'), ('Fullmetal Alchemist Deluxe vol 18'),
-
 ('Devilman vol 1', TRUE), ('Devilman vol 2', TRUE), ('Devilman vol 3', TRUE),
 ('Devilman vol 4'), ('Devilman vol 5'),
-
 ('Buonanotte, Punpun vol 1', TRUE), ('Buonanotte, Punpun vol 2', TRUE), ('Buonanotte, Punpun vol 3', TRUE),
 ('Buonanotte, Punpun vol 4', TRUE), ('Buonanotte, Punpun vol 5'), ('Buonanotte, Punpun vol 6'),
 ('Buonanotte, Punpun vol 7'), ('Buonanotte, Punpun vol 8'), ('Buonanotte, Punpun vol 9'),
 ('Buonanotte, Punpun vol 10'), ('Buonanotte, Punpun vol 11'), ('Buonanotte, Punpun vol 12'),
 ('Buonanotte, Punpun vol 13'),
-
 ('Look Back', TRUE);
 
 -- Inserimento autori (delle serie che inseriamo)
@@ -72,3 +66,9 @@ INSERT INTO genere (nome) VALUES
 ('Fantasy'), ('Supernatural'), ('Horror'),
 ('Psychological'), ('Sci'), ('Thriller'),
 ('Sports'), ('Graphic Novel');
+
+-- Inserimento case editrici
+INSERT INTO casaeditrice (nome, nazione) VALUES
+('Panini Comics', 'Italy'),
+('Star Comics', 'Italy'),
+('J-Pop', 'Italy');
