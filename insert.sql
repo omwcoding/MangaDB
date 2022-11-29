@@ -1,24 +1,24 @@
 USE MangaDB;
 
 -- Inserisci tutte le serie in tuo possesso (pensare se inserirne altre come "wishlist")
-INSERT INTO SERIE (nome, anno_pubblicazione, terminato) VALUES 
+INSERT INTO SERIE (nome, anno_pubblicazione, stato) VALUES 
 ('Berserk', 1989),
-('Buonanotte, Punpun', 2007, TRUE),
-('Devilman', 1972, TRUE),
+('Buonanotte, Punpun', 2007, 'FINISHED'),
+('Devilman', 1972, 'FINISHED'),
 ('Chainsaw Man', 2018),
-('Tatsuki Fujimoto Short Stories', 2021, TRUE),
-('Fullmetal Alchemist', 2001, TRUE),
-('Look Back', 2021, TRUE);
+('Tatsuki Fujimoto Short Stories', 2021, 'FINISHED'),
+('Fullmetal Alchemist', 2001, 'FINISHED'),
+('Look Back', 2021, 'FINISHED');
 
 -- Categorie di manga (questi rimarranno fissi)
-INSERT INTO categoria (nome) VALUES 
+INSERT INTO CATEGORIA (nome) VALUES 
 ('Shonen'),
 ('Shoujo'),
 ('Seinen'),
 ('Josei');
 
 -- Inserisci tutti i volumi di una serie inserita
-INSERT INTO volume (nome, possesso) VALUES
+INSERT INTO VOLUME (nome, possesso) VALUES
 ('Berserk vol 1', TRUE), ('Berserk vol 2', TRUE), ('Berserk vol 3', TRUE), ('Berserk vol 4', TRUE),
 ('Berserk vol 5', TRUE), ('Berserk vol 6', TRUE), ('Berserk vol 7', TRUE), ('Berserk vol 8', TRUE),
 ('Berserk vol 9', TRUE), ('Berserk vol 10', TRUE), ('Berserk vol 11', TRUE), ('Berserk vol 12', TRUE),
@@ -52,7 +52,7 @@ INSERT INTO volume (nome, possesso) VALUES
 ('Look Back', TRUE);
 
 -- Inserimento autori (delle serie che inseriamo)
-INSERT INTO autore (nome, nazionalità) VALUES
+INSERT INTO AUTORE (nome, nazionalità) VALUES
 ('Kentaro Miura', 'Japan'),
 ('Inio Asano', 'Japan'),
 ('Tatsuki Fujimoto', 'Japan'),
@@ -60,7 +60,7 @@ INSERT INTO autore (nome, nazionalità) VALUES
 ('Hiromu Arakawa', 'Japan');
 
 -- Inserimento generi (vedere come sviluppare i sottogeneri e se ne servono altri)
-INSERT INTO genere (nome) VALUES
+INSERT INTO GENERE (nome) VALUES
 ('Action'), ('Adult'), ('Adventure'),
 ('Comedy'), ('Drama'), ('Slice of Life'),
 ('Fantasy'), ('Supernatural'), ('Horror'),
@@ -68,7 +68,7 @@ INSERT INTO genere (nome) VALUES
 ('Sports'), ('Graphic Novel');
 
 -- Inserimento case editrici
-INSERT INTO casaeditrice (nome, nazione) VALUES
+INSERT INTO CASA_EDITRICE (nome, nazione) VALUES
 ('Panini Comics', 'Italy'),
 ('Star Comics', 'Italy'),
 ('J-Pop', 'Italy');
