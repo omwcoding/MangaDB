@@ -9,7 +9,7 @@ CREATE TABLE SERIE(
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     anno_pubblicazione INT DEFAULT NULL,
-    stato VARCHAR(30) NOT NULL DEFAULT 'IN PROGRESS',
+    stato VARCHAR(30) NOT NULL DEFAULT 'IN PROGRESS'
 );
 
 -- Creazione tabella Volume
@@ -39,7 +39,7 @@ CREATE TABLE CATEGORIA(
     nome CHAR(50)
 );
 
---Creazione tabella Casa Editrice
+-- Creazione tabella Casa Editrice
 CREATE TABLE CASA_EDITRICE(
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50),
