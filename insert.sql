@@ -1,15 +1,15 @@
 -- Active: 1669719169707@@127.0.0.1@3306@mangadb
 USE MangaDB;
 
--- Inserisci tutte le serie in tuo possesso (pensare se inserirne altre come "wishlist")
+-- Inserisci tutte le serie in tuo possesso
 INSERT INTO SERIE (nome, anno_pubblicazione, stato) VALUES 
 ('Berserk', 1989),
 ('Buonanotte, Punpun', 2007, 'FINISHED'), -- perchè errore?
-('Devilman', 1972),
+('Devilman', 1972, 'FINISHED'),
 ('Chainsaw Man', 2018),
-('Tatsuki Fujimoto Short Stories', 2021),
-('Fullmetal Alchemist', 2001),
-('Look Back', 2021);
+('Tatsuki Fujimoto Short Stories', 2021, 'FINISHED'),
+('Fullmetal Alchemist', 2001, 'FINISHED'),
+('Look Back', 2021, 'FINISHED');
 
 -- Categorie di manga (questi rimarranno fissi)
 INSERT INTO CATEGORIA (nome) VALUES 

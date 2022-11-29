@@ -9,7 +9,7 @@ CREATE TABLE SERIE(
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     anno_pubblicazione INT DEFAULT NULL,
-    stato VARCHAR(30) DEFAULT 'IN PROGRESS'
+    stato VARCHAR(30) DEFAULT NULL
 );
 
 -- Creazione tabella Volume
