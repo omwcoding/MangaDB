@@ -1,5 +1,4 @@
--- Active: 1669626310282@@127.0.0.1@3306@mangadb
--- 
+-- Active: 1669626310282@@127.0.0.1@3306@mangadb 
 DROP database IF EXISTS MangaDB;
 CREATE DATABASE IF NOT EXISTS MangaDB;
 
