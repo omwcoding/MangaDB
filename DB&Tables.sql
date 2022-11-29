@@ -1,4 +1,4 @@
--- Active: 1669626310282@@127.0.0.1@3306@mangadb 
+-- Active: 1669719169707@@127.0.0.1@3306@mangadb
 DROP database IF EXISTS MangaDB;
 CREATE DATABASE IF NOT EXISTS MangaDB;
 
@@ -9,14 +9,14 @@ CREATE TABLE SERIE(
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     anno_pubblicazione INT DEFAULT NULL,
-    stato VARCHAR(30) NOT NULL DEFAULT 'IN PROGRESS'
+    stato VARCHAR(30) DEFAULT 'IN PROGRESS'
 );
 
 -- Creazione tabella Volume
 CREATE TABLE VOLUME(
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
-    possesso BOOL DEFAULT FALSE
+    possesso BIT DEFAULT NULL
 );
 
 -- Creazione tabella Autore
