@@ -1,12 +1,12 @@
--- Active: 1669719169707@@127.0.0.1@3306@mangadb
+-- Active: 1669626310282@@127.0.0.1@3306@mangadb
 USE MangaDB;
 
 -- Inserisci tutte le serie in tuo possesso
 INSERT INTO SERIE (nome, anno_pubblicazione, stato) VALUES 
-('Berserk', 1989),
-('Buonanotte, Punpun', 2007, 'FINISHED'), -- perchè errore?
+('Berserk', 1989, 'ON GOING'),
+('Buonanotte, Punpun', 2007, 'FINISHED'), 
 ('Devilman', 1972, 'FINISHED'),
-('Chainsaw Man', 2018),
+('Chainsaw Man', 2018, 'ON GOING'),
 ('Tatsuki Fujimoto Short Stories', 2021, 'FINISHED'),
 ('Fullmetal Alchemist', 2001, 'FINISHED'),
 ('Look Back', 2021, 'FINISHED');
@@ -20,16 +20,16 @@ INSERT INTO CATEGORIA (nome) VALUES
 
 -- Inserisci tutti i volumi di una serie inserita
 INSERT INTO VOLUME (nome, possesso) VALUES
-('Berserk vol 1', 1), ('Berserk vol 2', 1), ('Berserk vol 3', 1), ('Berserk vol 4', 1), --perchè errore?
+('Berserk vol 1', 1), ('Berserk vol 2', 1), ('Berserk vol 3', 1), ('Berserk vol 4', 1),
 ('Berserk vol 5', 1), ('Berserk vol 6', 1), ('Berserk vol 7', 1), ('Berserk vol 8', 1),
 ('Berserk vol 9', 1), ('Berserk vol 10', 1), ('Berserk vol 11', 1), ('Berserk vol 12', 1),
 ('Berserk vol 13', 1), ('Berserk vol 14', 1), ('Berserk vol 15', 1), ('Berserk vol 16', 1), 
 ('Berserk vol 17', 1), ('Berserk vol 18', 1), ('Berserk vol 19', 1), ('Berserk vol 20', 1),
-('Berserk vol 22', 1), ('Berserk vol 23'), ('Berserk vol 24'), ('Berserk vol 25', 1),
-('Berserk vol 26'), ('Berserk vol 27'), ('Berserk vol 28', 1), ('Berserk vol 29'),
-('Berserk vol 30'), ('Berserk vol 31'), ('Berserk vol 32'), ('Berserk vol 33'),
-('Berserk vol 34'), ('Berserk vol 35'), ('Berserk vol 36'), ('Berserk vol 37', 1),
-('Berserk vol 38'), ('Berserk vol 39'), ('Berserk vol 40', 1), ('Berserk vol 41'),
+('Berserk vol 22', 1), ('Berserk vol 23', 0), ('Berserk vol 24', 0), ('Berserk vol 25', 1),
+('Berserk vol 26', 0), ('Berserk vol 27', 0), ('Berserk vol 28', 1), ('Berserk vol 29', 0),
+('Berserk vol 30', 0), ('Berserk vol 31', 0), ('Berserk vol 32', 0), ('Berserk vol 33', 0),
+('Berserk vol 34', 0), ('Berserk vol 35', 0), ('Berserk vol 36', 0), ('Berserk vol 37', 1),
+('Berserk vol 38', 0), ('Berserk vol 39', 0), ('Berserk vol 40', 1), ('Berserk vol 41', 0),
 ('Chainsaw Man vol 1', 1), ('Chainsaw Man vol 2', 1), ('Chainsaw Man vol 3', 1), ('Chainsaw Man vol 4', 1),
 ('Chainsaw Man vol 5', 1), ('Chainsaw Man vol 6', 1), ('Chainsaw Man vol 7', 1), ('Chainsaw Man vol 8', 1),
 ('Chainsaw Man vol 9', 1), ('Chainsaw Man vol 10', 1), ('Chainsaw Man vol 11', 1),
@@ -39,17 +39,17 @@ INSERT INTO VOLUME (nome, possesso) VALUES
 ('Fullmetal Alchemist Deluxe vol 5', 1), ('Fullmetal Alchemist Deluxe vol 6', 1),
 ('Fullmetal Alchemist Deluxe vol 7', 1), ('Fullmetal Alchemist Deluxe vol 8', 1),
 ('Fullmetal Alchemist Deluxe vol 9', 1), ('Fullmetal Alchemist Deluxe vol 10', 1),
-('Fullmetal Alchemist Deluxe vol 11'), ('Fullmetal Alchemist Deluxe vol 12'),
-('Fullmetal Alchemist Deluxe vol 13'), ('Fullmetal Alchemist Deluxe vol 14'),
-('Fullmetal Alchemist Deluxe vol 15'), ('Fullmetal Alchemist Deluxe vol 16'),
-('Fullmetal Alchemist Deluxe vol 17'), ('Fullmetal Alchemist Deluxe vol 18'),
+('Fullmetal Alchemist Deluxe vol 11', 0), ('Fullmetal Alchemist Deluxe vol 12', 0),
+('Fullmetal Alchemist Deluxe vol 13', 0), ('Fullmetal Alchemist Deluxe vol 14', 0),
+('Fullmetal Alchemist Deluxe vol 15', 0), ('Fullmetal Alchemist Deluxe vol 16', 0),
+('Fullmetal Alchemist Deluxe vol 17', 0), ('Fullmetal Alchemist Deluxe vol 18', 0),
 ('Devilman vol 1', 1), ('Devilman vol 2', 1), ('Devilman vol 3', 1),
-('Devilman vol 4'), ('Devilman vol 5'),
+('Devilman vol 4', 0), ('Devilman vol 5', 0),
 ('Buonanotte, Punpun vol 1', 1), ('Buonanotte, Punpun vol 2', 1), ('Buonanotte, Punpun vol 3', 1),
-('Buonanotte, Punpun vol 4', 1), ('Buonanotte, Punpun vol 5'), ('Buonanotte, Punpun vol 6'),
-('Buonanotte, Punpun vol 7'), ('Buonanotte, Punpun vol 8'), ('Buonanotte, Punpun vol 9'),
-('Buonanotte, Punpun vol 10'), ('Buonanotte, Punpun vol 11'), ('Buonanotte, Punpun vol 12'),
-('Buonanotte, Punpun vol 13'),
+('Buonanotte, Punpun vol 4', 1), ('Buonanotte, Punpun vol 5', 0), ('Buonanotte, Punpun vol 6', 0),
+('Buonanotte, Punpun vol 7', 0), ('Buonanotte, Punpun vol 8', 0), ('Buonanotte, Punpun vol 9', 0),
+('Buonanotte, Punpun vol 10', 0), ('Buonanotte, Punpun vol 11', 0), ('Buonanotte, Punpun vol 12', 0),
+('Buonanotte, Punpun vol 13', 0),
 ('Look Back', 1);
 
 -- Inserimento autori (delle serie che inseriamo)
