@@ -9,6 +9,7 @@ INSERT INTO SERIE (nome, anno_pubblicazione, stato) VALUES
 ('Chainsaw Man', 2018, 'ON GOING'),
 ('Tatsuki Fujimoto Short Stories', 2021, 'FINISHED'),
 ('Fullmetal Alchemist', 2001, 'FINISHED'),
+('Fire Punch', 2016, 'FINISHED'),
 ('Look Back', 2021, 'FINISHED');
 
 -- Categorie di manga (questi rimarranno fissi)
