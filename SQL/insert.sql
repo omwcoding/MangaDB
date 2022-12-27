@@ -2,15 +2,15 @@
 USE MangaDB;
 
 -- Inserisci tutte le serie in tuo possesso
-INSERT INTO SERIE (nome, anno_pubblicazione, stato) VALUES 
-('Berserk', 1989, 'ON GOING'),
-('Buonanotte, Punpun', 2007, 'FINISHED'), 
-('Devilman', 1972, 'FINISHED'),
-('Chainsaw Man', 2018, 'ON GOING'),
-('Tatsuki Fujimoto Short Stories', 2021, 'FINISHED'),
-('Fullmetal Alchemist', 2001, 'FINISHED'),
-('Fire Punch', 2016, 'FINISHED'),
-('Look Back', 2021, 'FINISHED');
+INSERT INTO SERIE (nome, anno_pubblicazione, stato, n_volumi) VALUES 
+('Berserk', 1989, 'ON GOING', 41),
+('Buonanotte, Punpun', 2007, 'FINISHED', 13), 
+('Devilman', 1972, 'FINISHED', 5),
+('Chainsaw Man', 2018, 'ON GOING', 12),
+('Tatsuki Fujimoto Short Stories', 2021, 'FINISHED', 2),
+('Fullmetal Alchemist', 2001, 'FINISHED', 18),
+('Fire Punch', 2016, 'FINISHED', 8),
+('Look Back', 2021, 'FINISHED', 1);
 
 -- Categorie di manga (questi rimarranno fissi)
 INSERT INTO CATEGORIA (nome) VALUES 

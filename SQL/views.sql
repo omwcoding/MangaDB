@@ -9,9 +9,9 @@ SELECT nome FROM mangadb.volume WHERE possesso = 0;
 
 CREATE VIEW SerieInPossesso
 AS
-SELECT * FROM mangadb.serie ORDER BY `stato` desc;
+SELECT nome, anno_pubblicazione, stato, n_volumi FROM mangadb.serie ORDER BY `stato` desc;
 
 CREATE VIEW Mangaka
 AS
-SELECT * FROM mangadb.autore;
+SELECT nome, nazionalità FROM mangadb.autore;
 
