@@ -1,4 +1,4 @@
--- Active: 1669626310282@@127.0.0.1@3306@mangadb
+-- Active: 1669719169707@@127.0.0.1@3306@mangadb
 USE MangaDB;
 
 -- Inserisci tutte le serie in tuo possesso
@@ -29,7 +29,7 @@ INSERT INTO VOLUME (nome, possesso) VALUES
 ('Berserk vol 26', 0), ('Berserk vol 27', 0), ('Berserk vol 28', 1), ('Berserk vol 29', 0),
 ('Berserk vol 30', 0), ('Berserk vol 31', 0), ('Berserk vol 32', 0), ('Berserk vol 33', 0),
 ('Berserk vol 34', 0), ('Berserk vol 35', 0), ('Berserk vol 36', 0), ('Berserk vol 37', 1),
-('Berserk vol 38', 0), ('Berserk vol 39', 0), ('Berserk vol 40', 1), ('Berserk vol 41', 0),
+('Berserk vol 38', 0), ('Berserk vol 39', 1), ('Berserk vol 40', 1), ('Berserk vol 41', 1),
 ('Chainsaw Man vol 1', 1), ('Chainsaw Man vol 2', 1), ('Chainsaw Man vol 3', 1), ('Chainsaw Man vol 4', 1),
 ('Chainsaw Man vol 5', 1), ('Chainsaw Man vol 6', 1), ('Chainsaw Man vol 7', 1), ('Chainsaw Man vol 8', 1),
 ('Chainsaw Man vol 9', 1), ('Chainsaw Man vol 10', 1), ('Chainsaw Man vol 11', 1),
@@ -50,6 +50,8 @@ INSERT INTO VOLUME (nome, possesso) VALUES
 ('Buonanotte, Punpun vol 7', 0), ('Buonanotte, Punpun vol 8', 0), ('Buonanotte, Punpun vol 9', 0),
 ('Buonanotte, Punpun vol 10', 0), ('Buonanotte, Punpun vol 11', 0), ('Buonanotte, Punpun vol 12', 0),
 ('Buonanotte, Punpun vol 13', 0),
+('Fire Punch vol 1', 1), ('Fire Punch vol 2', 1), ('Fire Punch vol 3', 1), ('Fire Punch vol 4', 1), 
+('Fire Punch vol 5', 1), ('Fire Punch vol 6', 1), ('Fire Punch vol 7', 1), ('Fire Punch vol8', 1), 
 ('Look Back', 1);
 
 -- Inserimento autori (delle serie che inseriamo)

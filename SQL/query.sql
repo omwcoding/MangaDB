@@ -1,6 +1,6 @@
 -- Active: 1669719169707@@127.0.0.1@3306@mangadb
 --Mostra i volumi attualmente in posssesso
-SELECT * FROM mangadb.volume WHERE possesso = 1;
+SELECT nome FROM mangadb.volume WHERE possesso = 1;
 
 --Mostra i volumi mancanti delle serie iniziate
 SELECT * FROM mangadb.volume WHERE possesso = 0;
