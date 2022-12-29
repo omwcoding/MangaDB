@@ -1,4 +1,4 @@
--- Active: 1669719169707@@127.0.0.1@3306@mangadb
+-- Active: 1672329880844@@127.0.0.1@3306@mangadb
 USE MangaDB;
 
 -- Inserisci tutte le serie in tuo possesso
