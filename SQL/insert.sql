@@ -57,11 +57,11 @@ INSERT INTO VOLUME (nome, possesso) VALUES
 
 -- Inserimento autori (delle serie che inseriamo)
 INSERT INTO AUTORE (nome, nazionalità) VALUES
-('Kentaro Miura', 'Japan'),
-('Inio Asano', 'Japan'),
-('Tatsuki Fujimoto', 'Japan'),
-('Go Nagai', 'Japan'),
-('Hiromu Arakawa', 'Japan');
+('Kentaro Miura'),
+('Inio Asano'),
+('Tatsuki Fujimoto'),
+('Go Nagai'),
+('Hiromu Arakawa');
 
 -- Inserimento generi (vedere come sviluppare i sottogeneri e se ne servono altri)
 INSERT INTO GENERE (nome) VALUES
@@ -72,7 +72,7 @@ INSERT INTO GENERE (nome) VALUES
 ('Sports'), ('Graphic Novel');
 
 -- Inserimento case editrici
-INSERT INTO CASA_EDITRICE (nome, nazione) VALUES
-('Panini Comics', 'Italy'),
-('Star Comics', 'Italy'),
-('J-Pop', 'Italy');
+INSERT INTO EDITORE (nome, nazione) VALUES
+('Panini Comics'),
+('Star Comics'),
+('J-Pop');
