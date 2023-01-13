@@ -7,7 +7,7 @@ CREATE VIEW VolumiMancanti
 AS
 SELECT nome FROM mangadb.volume WHERE possesso = 0;
 
-CREATE VIEW SerieInPossesso
+CREATE VIEW Serie
 AS
 SELECT nome, anno_pubblicazione, stato, n_volumi FROM mangadb.serie ORDER BY `stato` desc;
 
