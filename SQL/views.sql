@@ -13,7 +13,7 @@ SELECT nome, anno_pubblicazione, stato, n_volumi FROM mangadb.serie ORDER BY `st
 
 CREATE VIEW Mangaka
 AS
-SELECT nome, nazionalità FROM mangadb.autore;
+SELECT nome FROM mangadb.autore;
 
 
 
