@@ -11,6 +11,7 @@ CREATE TABLE SERIE(
     anno_pubblicazione INT DEFAULT NULL,
     stato VARCHAR(30) DEFAULT NULL,
     n_volumi INT DEFAULT NULL,
+    costo_totale DECIMAL(5,2) DEFAULT NULL,
 
     id_editore INT DEFAULT NULL,
     id_categoria INT DEFAULT NULL,

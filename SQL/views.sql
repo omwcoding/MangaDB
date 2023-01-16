@@ -1,7 +1,7 @@
 -- Active: 1672329880844@@127.0.0.1@3306@mangadb
 CREATE VIEW VolumiInPossesso
 AS
-SELECT nome FROM mangadb.volume WHERE possesso = 1;
+SELECT * FROM mangadb.volume WHERE possesso = 1;
 
 CREATE VIEW VolumiMancanti
 AS
