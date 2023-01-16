@@ -9,11 +9,11 @@ Piccolo progetto per la gestione di un database personale di manga.
 - ...
  
 ### To-Do
-- [ ] Creazione tabelle 
+- [x] Creazione tabelle 
   - [ ] Struttura
-  - [ ] Chiavi esterne
-- [ ] Insert
-- [ ] Views
+  - [x] Chiavi esterne
+- [x] Insert
+- [x] Views
 
 ### Completed Column ✓
 - [x] Completed task title  
