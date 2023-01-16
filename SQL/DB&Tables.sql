@@ -53,8 +53,18 @@ CREATE TABLE EDITORE(
     nome VARCHAR(255)
 );
 
-ALTER TABLE serie ADD CONSTRAINT FK_SerieEditore FOREIGN KEY (id_editore) REFERENCES editore(id_editore) ON UPDATE CASCADE;
-ALTER TABLE serie ADD CONSTRAINT FK_SerieCategoria FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria) ON UPDATE CASCADE;
-ALTER TABLE serie ADD CONSTRAINT FK_SerieGenere FOREIGN KEY (id_genere) REFERENCES genere(id_genere) ON UPDATE CASCADE;
-ALTER TABLE serie ADD CONSTRAINT FK_SerieAutore FOREIGN KEY (id_autore) REFERENCES autore(id_autore)ON UPDATE CASCADE;
-ALTER TABLE volume ADD CONSTRAINT FK_SerieVolume FOREIGN KEY (id_serie) REFERENCES serie(id_serie) ON UPDATE CASCADE;
+ALTER TABLE serie 
+    ADD CONSTRAINT FK_SerieEditore FOREIGN KEY (id_editore) REFERENCES editore(id_editore) 
+        ON UPDATE CASCADE;
+ALTER TABLE serie 
+    ADD CONSTRAINT FK_SerieCategoria FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria) 
+        ON UPDATE CASCADE;
+ALTER TABLE serie 
+    ADD CONSTRAINT FK_SerieGenere FOREIGN KEY (id_genere) REFERENCES genere(id_genere) 
+        ON UPDATE CASCADE;
+ALTER TABLE serie 
+    ADD CONSTRAINT FK_SerieAutore FOREIGN KEY (id_autore) REFERENCES autore(id_autore)
+        ON UPDATE CASCADE;
+ALTER TABLE volume 
+    ADD CONSTRAINT FK_SerieVolume FOREIGN KEY (id_serie) REFERENCES serie(id_serie) 
+        ON UPDATE CASCADE;
