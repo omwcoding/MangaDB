@@ -2,9 +2,30 @@
 
 Piccolo progetto per la gestione di un database personale di manga.
 
-Next steps:
+### Next steps:
 - Setup database "MangaDB"
 - Sistema di wishlist
 - Interfaccia grafica (inserimento, filtri ecc)
 - ...
  
+### To-Do
+- [ ] Creazione tabelle 
+  - [ ] Struttura
+  - [ ] Chiavi esterne
+- [ ] Insert
+- [ ] Views
+
+### Completed Column ✓
+- [x] Completed task title  
+
+
+Considerazioni:
+- Capire dove "storare" questo DB (host?)
+- GUI per fare gli insert?
+- Possibile APP?
+- Estrarre informazioni automaticamente (Anilist API?)
+    - Ogni serie ha 1(?) autore, ogni autore ha almeno 1 e può avere più serie
+    - Ogni serie ha almeno un volume e può avere di più, ogni volume ha solo una serie
+    - Ogni serie ha uno o più generi, ogni genere ha 0 o più serie
+    - Ogni serie ha una sola categoria, ogni categoria ha 0 o più serie
+    - Ogni serie ha una sola casa editrice, ogni casa editrice ha almeno 1 e può avere più serie
