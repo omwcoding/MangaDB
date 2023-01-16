@@ -14,7 +14,7 @@ CREATE TABLE SERIE(
 
     id_editore INT NOT NULL,
     id_categoria INT NOT NULL,
-    -- generi VARCHAR(255) NOT NULL,
+    id_genere INT NOT NULL,
 
     FOREIGN KEY (id_editore) REFERENCES editore(id_editore),
     FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria)
