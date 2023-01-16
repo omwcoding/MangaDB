@@ -56,7 +56,7 @@ INSERT INTO VOLUME (nome, possesso) VALUES
 ('Look Back', 1);
 
 -- Inserimento autori (delle serie che inseriamo)
-INSERT INTO AUTORE (nome, nazionalità) VALUES
+INSERT INTO AUTORE (nome) VALUES
 ('Kentaro Miura'),
 ('Inio Asano'),
 ('Tatsuki Fujimoto'),
@@ -72,7 +72,7 @@ INSERT INTO GENERE (nome) VALUES
 ('Sports'), ('Graphic Novel');
 
 -- Inserimento case editrici
-INSERT INTO EDITORE (nome, nazione) VALUES
+INSERT INTO EDITORE (nome) VALUES
 ('Panini Comics'),
 ('Star Comics'),
 ('J-Pop');

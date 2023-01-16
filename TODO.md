@@ -15,7 +15,9 @@
 
 
 3) Accedere a questo database
+
 4) Inserimento manga
+
 5) Creare delle viste quindi dei filtri per vedere la lista in più modi (per autore, per titolo ecc..)
 
 
