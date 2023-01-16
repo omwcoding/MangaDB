@@ -1,11 +1,15 @@
 -- Active: 1672329880844@@127.0.0.1@3306@mangadb
 CREATE VIEW VolumiInPossesso
 AS
-SELECT * FROM mangadb.volume WHERE possesso = 1;
+SELECT mangadb.serie.nome AS nomeSerie, mangadb.volume.nome AS nomeVolume, mangadb.volume.is_standard, mangadb.volume.prezzo
+FROM mangadb.volume INNER JOIN mangadb.serie ON mangadb.volume.id_serie = mangadb.serie.id_serie
+WHERE mangadb.volume.possesso = 1 ORDER BY 'id_serie' desc;
 
 CREATE VIEW VolumiMancanti
 AS
-SELECT nome FROM mangadb.volume WHERE possesso = 0;
+SELECT mangadb.serie.nome AS nomeSerie, mangadb.volume.nome AS nomeVolume, mangadb.volume.is_standard, mangadb.volume.prezzo
+FROM mangadb.volume INNER JOIN mangadb.serie ON mangadb.volume.id_serie = mangadb.serie.id_serie
+WHERE mangadb.volume.possesso = 0 ORDER BY 'id_serie' desc;
 
 CREATE VIEW SeriePossesso
 AS

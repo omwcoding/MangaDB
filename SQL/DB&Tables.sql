@@ -12,7 +12,6 @@ CREATE TABLE SERIE(
     stato VARCHAR(30) DEFAULT NULL,
     n_volumi INT DEFAULT NULL,
     costo_totale DECIMAL(5,2) DEFAULT NULL,
-
     id_editore INT DEFAULT NULL,
     id_categoria INT DEFAULT NULL,
     id_genere INT DEFAULT NULL,
@@ -25,8 +24,8 @@ CREATE TABLE VOLUME(
     nome VARCHAR(255) NOT NULL,
     possesso BIT DEFAULT 0,
     prezzo DECIMAL(5,2) DEFAULT NULL,
-
-    id_serie INT DEFAULT NULL  
+    id_serie INT DEFAULT NULL,
+    is_standard BIT DEFAULT 1
 );
 
 -- Creazione tabella Autore
@@ -55,16 +54,21 @@ CREATE TABLE EDITORE(
 
 ALTER TABLE serie 
     ADD CONSTRAINT FK_SerieEditore FOREIGN KEY (id_editore) REFERENCES editore(id_editore) 
-        ON UPDATE CASCADE;
+        ON UPDATE CASCADE
+        ON DELETE SET NULL;
 ALTER TABLE serie 
     ADD CONSTRAINT FK_SerieCategoria FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria) 
-        ON UPDATE CASCADE;
+        ON UPDATE CASCADE
+        ON DELETE SET NULL;
 ALTER TABLE serie 
     ADD CONSTRAINT FK_SerieGenere FOREIGN KEY (id_genere) REFERENCES genere(id_genere) 
-        ON UPDATE CASCADE;
+        ON UPDATE CASCADE
+        ON DELETE SET NULL;
 ALTER TABLE serie 
     ADD CONSTRAINT FK_SerieAutore FOREIGN KEY (id_autore) REFERENCES autore(id_autore)
-        ON UPDATE CASCADE;
+        ON UPDATE CASCADE
+        ON DELETE SET NULL;
 ALTER TABLE volume 
     ADD CONSTRAINT FK_SerieVolume FOREIGN KEY (id_serie) REFERENCES serie(id_serie) 
-        ON UPDATE CASCADE;
+        ON UPDATE CASCADE
+        ON DELETE SET NULL;
