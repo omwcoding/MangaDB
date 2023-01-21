@@ -31,7 +31,7 @@ INSERT INTO CATEGORIA (nome) VALUES
 ('Josei');
 
 -- Inserisci tutte le serie in tuo possesso
-INSERT INTO SERIE (nome, anno_pubblicazione, stato, n_volumi) VALUES 
+INSERT INTO SERIE (nome, anno_pubblicazione, is_finished, n_volumi) VALUES 
 ('Berserk', 1989, 'ON GOING', 41),
 ('Buonanotte, Punpun', 2007, 'FINISHED', 13), 
 ('Devilman', 1972, 'FINISHED', 5),

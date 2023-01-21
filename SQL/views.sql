@@ -13,7 +13,7 @@ WHERE mangadb.volume.possesso = 0 ORDER BY 'id_serie' desc;
 
 CREATE VIEW SeriePossesso
 AS
-SELECT nome, anno_pubblicazione, stato, n_volumi FROM mangadb.serie ORDER BY `stato` desc;
+SELECT nome, anno_pubblicazione, is_finished, n_volumi FROM mangadb.serie ORDER BY `is_finished` desc;
 
 CREATE VIEW Mangaka
 AS

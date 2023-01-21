@@ -9,7 +9,7 @@ CREATE TABLE SERIE(
     id_serie INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     anno_pubblicazione INT DEFAULT NULL,
-    stato VARCHAR(30) DEFAULT NULL,
+    is_finished VARCHAR(30) DEFAULT NULL,
     n_volumi INT DEFAULT NULL,
     costo_totale DECIMAL(5,2) DEFAULT NULL,
     id_editore INT DEFAULT NULL,
@@ -26,6 +26,7 @@ CREATE TABLE VOLUME(
     prezzo DECIMAL(5,2) DEFAULT NULL,
     id_serie INT DEFAULT NULL,
     is_standard BIT DEFAULT 1
+    is_read BIT DEFAULT 0
 );
 
 -- Creazione tabella Autore
