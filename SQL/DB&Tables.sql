@@ -25,7 +25,7 @@ CREATE TABLE VOLUME(
     possesso BIT DEFAULT 0,
     prezzo DECIMAL(5,2) DEFAULT NULL,
     id_serie INT DEFAULT NULL,
-    is_standard BIT DEFAULT 1
+    is_standard BIT DEFAULT 1,
     is_read BIT DEFAULT 0
 );
 

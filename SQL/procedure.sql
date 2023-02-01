@@ -2,10 +2,10 @@ USE MangaDB;
 
 -- Inserimento nuova serie
 DELIMITER //
-CREATE PROCEDURE insertSerie (IN nome VARCHAR(255), IN anno_pubblicazione INT, IN is_finished VARCHAR(30), IN n_volumi INT, IN costo_totale DECIMAL(5,2), IN id_editore INT, IN id_categoria INT, IN id_genere INT, IN id_autore INT)
+CREATE PROCEDURE insertSerie (IN nome VARCHAR(255), IN anno_pubblicazione INT, IN is_finished VARCHAR(30), IN n_volumi INT)
 BEGIN
-INSERT INTO serie (nome, anno_pubblicazione, is_finished, n_volumi, costo_totale, id_editore, id_categoria, id_genere, id_autore)
-VALUES (nome, anno_pubblicazione, is_finished, n_volumi, costo_totale, id_editore, id_categoria, id_genere, id_autore);
+INSERT INTO serie (nome, anno_pubblicazione, is_finished, n_volumi)
+VALUES (nome, anno_pubblicazione, is_finished, n_volumi);
 END //
 DELIMITER ;
 
@@ -18,5 +18,5 @@ VALUES (nome, possesso, prezzo, id_serie, is_standard, is_read);
 END //
 DELIMITER ;
 
---CALL insertSerie
+--CALL insertSerie("Claymore", 2001, "Finished", 27);
 --CALL insertVolume
