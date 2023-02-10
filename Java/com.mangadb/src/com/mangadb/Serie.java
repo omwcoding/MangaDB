@@ -14,4 +14,8 @@ public class Serie {
 		this.n_volumi = n_volumi;
 		this.costo_totale = costo_totale;
 	}
+
+	public double getCosto_totale() {
+		return costo_totale;
+	}
 }
