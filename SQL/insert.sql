@@ -54,9 +54,9 @@ INSERT INTO VOLUME (nome, possesso, prezzo, id_serie) VALUES
 ('volume 33', 0, 5.5, 1), ('volume 34', 0, 5.5, 1), ('volume 35', 0, 5.5, 1), ('volume 36', 0, 5.5, 1), 
 ('volume 37', 1, 5.5, 1), ('volume 38', 0, 5.5, 1), ('volume 39', 1, 5.5, 1), ('volume 40', 1, 5.5, 1),
 
-('volume 1', 1, 4.9, 3), ('volume 2', 1, 4.9, 3), ('volume 3', 1, 4.9, 3), ('volume 4', 1, 4.9, 3),
-('volume 5', 1, 4.9, 3), ('volume 6', 1, 4.9, 3), ('volume 7', 1, 4.9, 3), ('volume 8', 1, 4.9, 3),
-('volume 9', 1, 4.9, 3), ('volume 10', 1, 5.2, 3), ('volume 11', 1, 5.2, 3),
+('volume 1', 1, 4.9, 4), ('volume 2', 1, 4.9, 4), ('volume 3', 1, 4.9, 4), ('volume 4', 1, 4.9, 4),
+('volume 5', 1, 4.9, 4), ('volume 6', 1, 4.9, 4), ('volume 7', 1, 4.9, 4), ('volume 8', 1, 4.9, 4),
+('volume 9', 1, 4.9, 4), ('volume 10', 1, 5.2, 4), ('volume 11', 1, 5.2, 4),
 
 ('17-21', 1, 5.9, 5), ('22-26', 1, 5.9, 5),
 
