@@ -25,4 +25,18 @@ public class Serie {
 		}
 		return costoTotale;
 	}
+	
+	public void addVolume(Volume volume) {
+        this.volumi.add(volume);
+    }
+
+    public double calcolaCostoAttuale() {
+        double costoAttuale = 0;
+        for (Volume volume : volumi) {
+            if (volume.possesso) {
+                costoAttuale += volume.prezzo;
+            }
+        }
+        return costoAttuale;
+    }
 }
