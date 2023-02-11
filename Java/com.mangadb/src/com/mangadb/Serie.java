@@ -6,16 +6,22 @@ public class Serie {
 	boolean is_finished;
 	int n_volumi;
 	double costo_totale;
+	Volume[] volumi;
 	
-	Serie(int id_serie, String nome, boolean is_finished, int n_volumi, double costo_totale){
+	Serie(int id_serie, String nome, boolean is_finished, int n_volumi, double costo_totale, Volume[] volumi){
 		this.id_serie = id_serie;
 		this.nome = nome;
 		this.is_finished = is_finished;
 		this.n_volumi = n_volumi;
 		this.costo_totale = costo_totale;
+		this.volumi = volumi;
 	}
 
-	public double getCosto_totale() {
-		return costo_totale;
+	public double calcolaCostoTotale() {
+		double costoTotale = 0;
+		for (Volume volume : volumi) {
+			costoTotale += volume.prezzo;
+		}
+		return costoTotale;
 	}
 }
