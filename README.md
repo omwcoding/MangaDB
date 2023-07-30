@@ -2,11 +2,12 @@
 Piccolo progetto per la creazione e gestione di un database che ha varie funzioni di controllo su una libreria di manga.
 
 ### To-Do
-- [] Creazione tabelle 
-  - [ ] Struttura
-  - [x] Chiavi esterne
-- [x] Insert
-- [x] Views
+- [] Setup Django project
+- [] Setup DB
+  - [] Struttura
+  - [] Chiavi esterne
+- [] Insert
+- [] Views
 
 ### Completed Column ✓
 - [x] Completed task title  
