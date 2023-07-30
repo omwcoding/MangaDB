@@ -1,0 +1,20 @@
+<!-- templates/homepage.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MangaDB - Homepage</title>
+</head>
+<body>
+    <h1>Welcome to MangaDB</h1>
+
+    <h2>My Manga Collection</h2>
+    <ul>
+        {% for collection in collections %}
+            <li>
+                <a href="{% url 'collection_detail' collection.id %}">{{ collection.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

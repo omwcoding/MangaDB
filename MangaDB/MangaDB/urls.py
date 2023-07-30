@@ -1,22 +1,15 @@
-"""
-URL configuration for MangaDB project.
+# urls.py del progetto principale "MangaDB"
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+from manga.views import homepage, collection_list, collection_detail, manga_volume_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('manga/', include('manga.urls')),
+    path('collections/', collection_list, name='collection_list'),
+    path('collections/<int:collection_id>/', collection_detail, name='collection_detail'),
+    path('manga_volumes/', manga_volume_list, name='manga_volume_list'),
+    path('', homepage, name='homepage'),  # Aggiungi questo URL per la homepage
+    # Aggiungi altre URL e viste se necessario
 ]
