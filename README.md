@@ -4,6 +4,7 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 ### To-Do
 - [X] Setup Django project
 - [] Struttura DB
+  - [ ] Entità 
   - [] Struttura
   - [] Chiavi esterne
 - [] Insert
