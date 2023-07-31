@@ -7,3 +7,4 @@ urlpatterns = [
     path('manga_volumes/', views.manga_volume_list, name='manga_volume_list'),
     # Aggiungi altre URL e viste se necessario
 ]
+

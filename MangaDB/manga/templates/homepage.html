@@ -1,5 +1,3 @@
-<!-- templates/homepage.html -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,16 +5,20 @@
 </head>
 <body>
     <h1>MangaDB</h1>
-    <h2> Hai una nuova serie? Puoi cercarla qui:</h2>
-    
-    
-    
+    <!--Link to admin panel--> 
+    <a href="{% url 'admin:index' %}">Pannello Admin</a>
 
+    <h2> Hai una nuova serie? Puoi cercarla qui:</h2>
+    <!--Funzione di ricerca manga non in collezione--> 
+    
     <h3>La tua libreria:</h3>
     <ul>
         {% for collection in collections %}
             <li>
-                <a href="{% url 'collection_detail' collection.id %}">{{ collection.name }}</a>
+                <a href="{% url 'collection_detail' collection.id %}">
+                    <img src="{{ collection.image.url }}" alt="{{ collection.name }}" height="100">
+                </a>
+                - {{ collection.completion_percentage }}% completato
             </li>
         {% endfor %}
     </ul>

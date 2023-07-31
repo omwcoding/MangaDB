@@ -1,5 +1,4 @@
 from django.db import models
-from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 class Author(models.Model):
@@ -35,41 +34,61 @@ class Collection(models.Model):
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, blank=True)
     genre = models.ForeignKey(Genre, on_delete=models.SET_NULL, null=True, blank=True)
     completion_percentage = models.DecimalField(max_digits=5, decimal_places=2, default=0)
-    image = models.ImageField(upload_to='images/', default='images/None/No-img.jpg')
+    image = models.ImageField(upload_to='images/', default='default.jpg')
     favorite = models.BooleanField(default=False)
     totalprice = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
 
     def __str__(self):
         return self.name
     
-    def calculate_total_price(self):
-        total_price = 0
+    def calculate_totalprice(self):
+        totalprice = 0
         for volume in self.mangavolume_set.all():
-            total_price += volume.price
-        return total_price
+            totalprice += volume.price
+        self.totalprice = totalprice
+
 
     def calculate_completion_percentage(self):
         total_volumes = self.mangavolume_set.count()
         owned_volumes = self.mangavolume_set.filter(owned=True).count()
+
         if total_volumes > 0:
-            percentage = (owned_volumes / total_volumes) * 100.0
+            percentage = (owned_volumes / total_volumes) * 100
             return round(percentage, 2)
-        return 0
+        else:
+            return 0
+    
+    def update_completion_percentage(self):
+        total_volumes = self.mangavolume_set.count()
+        owned_volumes = self.mangavolume_set.filter(owned=True).count()
+
+        if total_volumes > 0:
+            percentage = (owned_volumes / total_volumes) * 100
+            self.completion_percentage = round(percentage, 2)
+        else:
+            self.completion_percentage = 0
+        self.save()
 
     def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)  # Save the Collection instance first
-        # Create volumes after saving the Collection
         from .models import MangaVolume
-        for number in range(1, self.numberofvolumes + 1):
-            MangaVolume.objects.create(
-                number=number,
-                price=0,
-                owned=False,
-                collection=self,
-            )
-        # Calculate the total price after creating the volumes
-        self.totalprice = self.calculate_total_price()
-        super().save(*args, **kwargs)
+        if not self.pk:  # Only perform this on initial creation, not on updates
+            super().save(*args, **kwargs)  # Save the Collection instance first
+
+            for number in range(1, self.numberofvolumes + 1):
+                volume_name = f"{self.name} volume {number}"
+                MangaVolume.objects.create(
+                    name=volume_name,
+                    number=number,
+                    price=0,
+                    owned=False,
+                    collection=self,
+                )
+
+            # Calculate the total price after creating the volumes
+            self.calculate_totalprice()
+        else:
+            super().save(*args, **kwargs)  # For updates, just save the Collection instance
+
 
 
 class MangaVolume(models.Model):

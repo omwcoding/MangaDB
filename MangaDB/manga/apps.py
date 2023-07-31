@@ -5,4 +5,4 @@ class MangaConfig(AppConfig):
     name = 'manga'
 
     def ready(self):
-        import manga.signals  # Aggiungi questa riga per importare il file signals.py
+        import manga.signals
