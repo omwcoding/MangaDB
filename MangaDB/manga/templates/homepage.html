@@ -1,7 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>MangaDB - Homepage</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <h1>MangaDB</h1>
@@ -10,17 +12,19 @@
 
     <h2> Hai una nuova serie? Puoi cercarla qui:</h2>
     <!--Funzione di ricerca manga non in collezione--> 
-    
+    <p>Aggiungere funzione</p>
     <h3>La tua libreria:</h3>
-    <ul>
-        {% for collection in collections %}
-            <li>
-                <a href="{% url 'collection_detail' collection.id %}">
-                    <img src="{{ collection.image.url }}" alt="{{ collection.name }}" height="100">
-                </a>
-                - {{ collection.completion_percentage }}% completato
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="container">
+        <ul>
+            {% for collection in collections %}
+                <li>
+                    <a href="{% url 'collection_detail' collection.id %}">
+                        <img src="{{ collection.image.url }}" alt="{{ collection.name }}" height="100">
+                    </a>
+                    <span class="completion">- Completamento: <span>{{ collection.completion_percentage }}%</span></span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
