@@ -6,7 +6,64 @@
     <h2>Aggiungi una nuova serie alla collezione</h2>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form.name.label_tag }} {{ form.name }}
+        {{ form.description.label_tag }} {{ form.description }}
+        {{ form.numberofvolumes.label_tag }} {{ form.numberofvolumes }}
+        {{ form.year.label_tag }} {{ form.year }}
+        
+        <h3>Autore:</h3>
+        <select name="author">
+            <option value="">Scegli un autore esistente</option>
+            {% for author in form.author.field.queryset %}
+                <option value="{{ author.id }}">{{ author.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="text" name="new_author" placeholder="Nuovo autore">
+
+        <h3>Editore:</h3>
+        <select name="publisher">
+            <option value="">Scegli un editore esistente</option>
+            {% for publisher in form.publisher.field.queryset %}
+                <option value="{{ publisher.id }}">{{ publisher.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="text" name="new_publisher" placeholder="Nuovo editore">
+
+        <h3>Genere:</h3>
+        <select name="genre">
+            <option value="">Scegli un genere esistente</option>
+            {% for genre in form.genre.field.queryset %}
+                <option value="{{ genre.id }}">{{ genre.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="text" name="new_genre" placeholder="Nuovo genere">
+        
+        <h3>Immagine:</h3>
+        {{ form.image.label_tag }} {{ form.image }}
+        
+        <br>
+        <br>
+        <br>
         <button type="submit">Aggiungi Serie</button>
     </form>
+    
+    <script>
+        const authorField = document.querySelector('input[name="author"]');
+        const newAuthorField = document.querySelector('input[name="new_author"]');
+        authorField.addEventListener('change', () => {
+            newAuthorField.style.display = authorField.value === '' ? 'block' : 'none';
+        });
+
+        const publisherField = document.querySelector('input[name="publisher"]');
+        const newPublisherField = document.querySelector('input[name="new_publisher"]');
+        publisherField.addEventListener('change', () => {
+            newPublisherField.style.display = publisherField.value === '' ? 'block' : 'none';
+        });
+
+        const genreField = document.querySelector('input[name="genre"]');
+        const newGenreField = document.querySelector('input[name="new_genre"]');
+        genreField.addEventListener('change', () => {
+            newGenreField.style.display = genreField.value === '' ? 'block' : 'none';
+        });
+    </script>
 {% endblock %}

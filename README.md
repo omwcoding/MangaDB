@@ -27,7 +27,18 @@ Istruzioni:
 1. Installare un ambiente virtuale dentro la cartella del progetto
     python -m venv venv
 
-2. Attivare l'ambiente virtuale (entrare nella cartella MangaDB)
+2. Attivare l'ambiente virtuale (controllare di essere nella cartella giusta)
+    venv\Scripts\activate
 
 3. Avvisare il server 
-    python manage.py runserver # Avvia il server
+    python manage.py runserver
+
+4. Ricordarsi di effettuare le migrazioni (nel caso di aggiornamenti al db)
+    python manage.py makemigrations
+    python manage.py migrate
+
+In caso di problemi reinstallare dipendenze:
+    pip install -r requirements.txt
+
+
+```

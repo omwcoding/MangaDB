@@ -20,9 +20,10 @@
     </div>
     
     <h2>Volumi nella collezione:</h2>
-    <form method="post" action="{% url 'update_volumes' collection.id %}">
+    <button id="toggle-volumes">Mostra/Nascondi Volumi</button>
+    <form id="volumes-form" method="post" action="{% url 'update_volumes' collection.id %}">
         {% csrf_token %}
-        <ul>
+        <ul id="volumes-list" style="display: none;">
             {% for volume in collection.mangavolume_set.all %}
                 <li>
                     <input type="checkbox" name="volumes" value="{{ volume.id }}" {% if volume.owned %}checked{% endif %}>
@@ -36,6 +37,21 @@
                 </li>
             {% endfor %}
         </ul>
-        <button type="submit">Aggiorna Volumi</button>
+        
+        <h2>Preferiti:</h2>
+        <label for="favorite">Preferito:</label>
+        <input type="checkbox" name="favorite" value="1" {% if collection.favorite %}checked{% endif %}>
+        <br>
+        <br>
+        <button type="submit">Aggiorna Volumi e Preferiti</button>
     </form>
+
+    <script>
+        const toggleButton = document.getElementById("toggle-volumes");
+        const volumesList = document.getElementById("volumes-list");
+
+        toggleButton.addEventListener("click", () => {
+            volumesList.style.display = volumesList.style.display === "none" ? "block" : "none";
+        });
+    </script>
 {% endblock %}
