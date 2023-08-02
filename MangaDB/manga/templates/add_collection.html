@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Aggiungi Nuova Serie{% endblock %}
+
+{% block content %}
+    <h2>Aggiungi una nuova serie alla collezione</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Aggiungi Serie</button>
+    </form>
+{% endblock %}

@@ -1,4 +1,6 @@
 from django.shortcuts import redirect, render, get_object_or_404
+
+from .forms import CollectionForm
 from .models import Collection, MangaVolume
 
 def collection_list(request):
@@ -32,5 +34,15 @@ def update_volumes(request, collection_id):
         collection.update_completion_percentage()
         
     return redirect('collection_detail', collection_id=collection_id)
-        
-    return redirect('collection_detail', collection_id=collection_id)
+
+def add_collection(request):
+    if request.method == 'POST':
+        form = CollectionForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('homepage')
+    else:
+        form = CollectionForm()
+    
+    return render(request, 'add_collection.html', {'form': form})
+    

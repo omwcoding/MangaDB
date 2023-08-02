@@ -8,12 +8,9 @@
 </head>
 <body>
     <h1>MangaDB</h1>
-    <!--Link to admin panel--> 
-    <a href="{% url 'admin:index' %}">Pannello Admin</a>
 
-    <h2> Hai una nuova serie? Puoi cercarla qui:</h2>
-    <!--Funzione di ricerca manga non in collezione--> 
-    <p>Aggiungere funzione</p>
+    <h2> Hai una nuova serie? <a href="{% url 'add_collection' %}"> Puoi aggiungerla qui</a></h2>
+
     <h3>La tua libreria:</h3>
     <div class="container">
         <ul class="manga-list">
@@ -33,5 +30,8 @@
             {% endfor %}
         </ul>
     </div>
+    <footer>
+        &copy; {{ current_year }} MangaDB. Tutti i diritti riservati.
+    </footer>
 </body>
 </html>
