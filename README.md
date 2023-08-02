@@ -3,12 +3,9 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 
 ### To-Do
 - [X] Setup Django project
-- [] Struttura DB
-  - [ ] Entità 
-  - [] Struttura
-  - [] Chiavi esterne
-- [] Insert
-- [] Views
+- [X] Setup Django app
+- [X] Setup Django models
+- [ ] 
 
 ### Completed Column ✓
 - [x] Completed task title  
@@ -25,15 +22,6 @@ Considerazioni:
 - Hosting della webapp
 - Estrarre informazioni automaticamente (Anilist API?)
  
-
-######
-Relazioni:
-    - Ogni serie ha 1(?) autore, ogni autore ha almeno 1 e può avere più serie
-    - Ogni serie ha almeno un volume e può avere di più, ogni volume ha solo una serie
-    - Ogni serie ha uno o più generi, ogni genere ha 0 o più serie
-    - Ogni serie ha una sola categoria, ogni categoria ha 0 o più serie
-    - Ogni serie ha una sola casa editrice, ogni casa editrice ha almeno 1 e può avere più serie
-
 Istruzioni:
 ```
 1. Installare un ambiente virtuale dentro la cartella del progetto
