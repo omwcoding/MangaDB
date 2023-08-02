@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}MangaDB{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+    </header>
+    <div class="navigation">
+        <a href="{% url 'homepage' %}">Torna alla Homepage</a>
+    </div>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        &copy; {{ current_year }} MangaDB. Tutti i diritti riservati.
+    </footer>
+</body>
+</html>

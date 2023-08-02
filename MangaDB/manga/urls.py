@@ -6,5 +6,6 @@ urlpatterns = [
     path('collections/', views.collection_list, name='collection_list'),
     path('collections/<int:collection_id>/', views.collection_detail, name='collection_detail'),
     path('manga_volumes/', views.manga_volume_list, name='manga_volume_list'),
+    path('collections/<int:collection_id>/update_volumes/', views.update_volumes, name='update_volumes'),
     # Altre URL e viste se necessario
 ]

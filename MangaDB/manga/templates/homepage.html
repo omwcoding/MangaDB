@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,13 +16,19 @@
     <p>Aggiungere funzione</p>
     <h3>La tua libreria:</h3>
     <div class="container">
-        <ul>
+        <ul class="manga-list">
             {% for collection in collections %}
-                <li>
+                <li class="manga-item">
                     <a href="{% url 'collection_detail' collection.id %}">
-                        <img src="{{ collection.image.url }}" alt="{{ collection.name }}" height="100">
+                        <div class="manga-cover">
+                            <img src="{{ collection.image.url }}" alt="{{ collection.name }}">
+                        </div>
                     </a>
-                    <span class="completion">- Completamento: <span>{{ collection.completion_percentage }}%</span></span>
+                    <div class="manga-info">
+                        <p class="manga-title">{{ collection.name }}</p>
+                        <p class="manga-author">{{ collection.author }}</p>
+                        <p class="completion">Completamento: <span>{{ collection.completion_percentage }}%</span></p>
+                    </div>
                 </li>
             {% endfor %}
         </ul>

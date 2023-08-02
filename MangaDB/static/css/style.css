@@ -54,14 +54,49 @@ body, h1, h2, h3, p, ul, li {
     display: block;
     margin: 0 auto;
   }
-  
-  .completion {
+
+  .manga-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .manga-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Cambio dell'allineamento da "center" a "flex-start" */
+    list-style: none;
+    padding: 0;
+  }
+
+  .manga-item {
+    flex: 0 0 calc(25% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .manga-cover img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Aggiunto margine sotto l'immagine */
+  }
+
+  .manga-author {
+    margin-bottom: 3px;
+  }
+
+  .manga-info {
     font-size: 14px;
     color: #666;
-  }
-  
+    margin-top: 10px;
+}
+
   .completion span {
     font-weight: bold;
     color: #3498db;
   }
-  
