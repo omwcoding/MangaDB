@@ -7,8 +7,11 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.name.label_tag }} {{ form.name }}
+        <br>
         {{ form.description.label_tag }} {{ form.description }}
+        <br>
         {{ form.numberofvolumes.label_tag }} {{ form.numberofvolumes }}
+        <br>
         {{ form.year.label_tag }} {{ form.year }}
         
         <h3>Autore:</h3>
