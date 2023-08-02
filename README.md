@@ -33,3 +33,13 @@ Relazioni:
     - Ogni serie ha uno o più generi, ogni genere ha 0 o più serie
     - Ogni serie ha una sola categoria, ogni categoria ha 0 o più serie
     - Ogni serie ha una sola casa editrice, ogni casa editrice ha almeno 1 e può avere più serie
+
+Istruzioni:
+```
+1. Installare un ambiente virtuale dentro la cartella del progetto
+    python -m venv venv
+
+2. Attivare l'ambiente virtuale (entrare nella cartella MangaDB)
+
+3. Avvisare il server 
+    python manage.py runserver # Avvia il server
