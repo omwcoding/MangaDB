@@ -4,15 +4,23 @@
 
 {% block content %}
     <h2>Aggiungi una nuova serie alla collezione</h2>
+    <br>
+    <br>
+    <br>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.name.label_tag }} {{ form.name }}
-        <br>
-        {{ form.description.label_tag }} {{ form.description }}
-        <br>
-        {{ form.numberofvolumes.label_tag }} {{ form.numberofvolumes }}
-        <br>
-        {{ form.year.label_tag }} {{ form.year }}
+        <div class="form-field">
+            {{ form.name.label_tag }} {{ form.name }}
+        </div>
+        <div class="form-field">
+            {{ form.description.label_tag }} {{ form.description }}
+        </div>
+        <div class="form-field">
+            {{ form.numberofvolumes.label_tag }} {{ form.numberofvolumes }}
+        </div>
+        <div class="form-field">
+            {{ form.year.label_tag }} {{ form.year }}
+        </div>
         
         <h3>Autore:</h3>
         <select name="author">
@@ -56,13 +64,13 @@
         authorField.addEventListener('change', () => {
             newAuthorField.style.display = authorField.value === '' ? 'block' : 'none';
         });
-
+    
         const publisherField = document.querySelector('input[name="publisher"]');
         const newPublisherField = document.querySelector('input[name="new_publisher"]');
         publisherField.addEventListener('change', () => {
             newPublisherField.style.display = publisherField.value === '' ? 'block' : 'none';
         });
-
+    
         const genreField = document.querySelector('input[name="genre"]');
         const newGenreField = document.querySelector('input[name="new_genre"]');
         genreField.addEventListener('change', () => {
