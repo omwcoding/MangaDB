@@ -25,10 +25,10 @@ Considerazioni:
 - Estrarre informazioni automaticamente (Anilist API?)
  
 Istruzioni:
-```
 1. Installare un ambiente virtuale dentro la cartella del progetto
+```
     python -m venv venv
-
+```
 2. Attivare l'ambiente virtuale (controllare di essere nella cartella giusta)
     venv\Scripts\activate
 
@@ -41,6 +41,3 @@ Istruzioni:
 
 In caso di problemi reinstallare dipendenze:
     pip install -r requirements.txt
-
-
-```
