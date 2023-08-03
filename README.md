@@ -6,6 +6,7 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 - [X] Setup Django app
 - [X] Setup Django models
 - [ ] 
+- 
 
 ### Completed Column ✓
 - [x] Completed task title  
@@ -14,6 +15,7 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 - Organizzazione pagine e urls
 - Sistema di wishlist
 - Funzioni di ricerca, inserimento, filtri ecc
+- Sistema di login e user (ognuno ha la sua collezione)
 - ...
  
 
