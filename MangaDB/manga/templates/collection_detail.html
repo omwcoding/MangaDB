@@ -23,7 +23,7 @@
         <a href="{% url 'edit_collection' collection.id %}" class="edit-button">Modifica collezione</a>
         <form method="post" action="{% url 'delete_collection' collection.id %}" class="delete-form">
             {% csrf_token %}
-            <button type="submit" class="delete-button">Elimina collezione</button>
+            <button type="delete_button" class="delete-button">Elimina collezione</button>
         </form>
     </div>
     

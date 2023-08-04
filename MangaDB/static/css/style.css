@@ -143,4 +143,19 @@ body, h1, h2, h3, p, ul, li {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+  .edit-button {
+  background-color: rgb(21, 255, 0);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  }
+  
+  .collection-actions {
+    display: flex; /* Abilita il layout flessibile */
+    gap: 10px; /* Aggiunge uno spazio tra i pulsanti */
 }
+
