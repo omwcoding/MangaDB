@@ -27,21 +27,22 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 ```
     python -m venv venv
 ```
-1. Attivare l'ambiente virtuale (controllare di essere nella cartella giusta)
+2. Attivare l'ambiente virtuale (controllare di essere nella cartella giusta)
 ```
+    cd .\MangaDB\
     venv\Scripts\activate
 ```
-1. Avvisare il server
+3. Avvisare il server
 ``` 
     python manage.py runserver
 ```
-1. Ricordarsi di effettuare le migrazioni (nel caso di aggiornamenti al db)
+4. Ricordarsi di effettuare le migrazioni (nel caso di aggiornamenti al db)
 ```
     python manage.py makemigrations
     python manage.py migrate
 ```
 
-Ricordarsi di installare le librerie e dipendenze necessarie
+! Ricordarsi di installare le librerie e dipendenze necessarie !
 ```
     pip install -r requirements.txt
 ```

@@ -95,3 +95,27 @@ def add_collection(request):
 
     context = {'form': form}
     return render(request, 'add_collection.html', context)
+
+def delete_collection(request, collection_id):
+    collection = get_object_or_404(Collection, id=collection_id)
+    
+    if request.method == 'POST':
+        if request.POST.get('confirm') == 'yes':
+            collection.delete()
+            return redirect('homepage')  # Reindirizza verso l'homepage
+    
+    return render(request, 'delete_collection.html', {'collection': collection})
+
+def edit_collection(request, collection_id):
+    collection = get_object_or_404(Collection, id=collection_id)
+
+    if request.method == 'POST':
+        form = CollectionForm(request.POST, request.FILES, instance=collection)
+        if form.is_valid():
+            form.save()
+            return redirect('collection_detail.html', collection_id=collection_id)
+    else:
+        form = CollectionForm(instance=collection)
+
+    context = {'form': form}
+    return render(request, 'edit_collection.html', context)

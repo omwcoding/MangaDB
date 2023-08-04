@@ -19,6 +19,14 @@
         </div>
     </div>
     
+    <div class="collection-actions">
+        <a href="{% url 'edit_collection' collection.id %}" class="edit-button">Modifica collezione</a>
+        <form method="post" action="{% url 'delete_collection' collection.id %}" class="delete-form">
+            {% csrf_token %}
+            <button type="submit" class="delete-button">Elimina collezione</button>
+        </form>
+    </div>
+    
     <h2>Volumi nella collezione:</h2>
     <button id="toggle-volumes">Mostra/Nascondi Volumi</button>
     <form id="volumes-form" method="post" action="{% url 'update_volumes' collection.id %}">

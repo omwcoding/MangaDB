@@ -8,5 +8,7 @@ urlpatterns = [
     path('manga_volumes/', views.manga_volume_list, name='manga_volume_list'),
     path('collections/<int:collection_id>/update_volumes/', views.update_volumes, name='update_volumes'),
     path('add_collection/', views.add_collection, name='add_collection'),
+    path('collections/<int:collection_id>/edit/', views.edit_collection, name='edit_collection'),
+    path('collections/<int:collection_id>/delete/', views.delete_collection, name='delete_collection'),
     # Altre URL e viste se necessario
 ]

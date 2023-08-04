@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Elimina Collezione{% endblock %}
+
+{% block content %}
+    <h2>Sei sicuro di voler eliminare la collezione "{{ collection.name }}"?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="delete-button" name="confirm" value="yes">Conferma Eliminazione</button>
+        <a href="{% url 'collection_detail' collection.id %}">Annulla</a>
+    </form>
+{% endblock %}

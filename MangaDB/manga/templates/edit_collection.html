@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Modifica Collezione{% endblock %}
+
+{% block content %}
+    <h2>Modifica la collezione "{{ collection.name }}"</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salva Modifiche</button>
+    </form>
+{% endblock %}
