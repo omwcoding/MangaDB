@@ -159,3 +159,12 @@ body, h1, h2, h3, p, ul, li {
     gap: 10px; /* Aggiunge uno spazio tra i pulsanti */
 }
 
+  .library-heading {
+    text-align: center; /* Centra orizzontalmente */
+    margin-top: 20px; /* Aggiunge uno spazio sopra l'elemento */
+    font-size: 24px;
+
+    padding: 10px; /* Spaziatura interna */
+    border: 8px solid #ccc; /* Bordo con colore e spessore */
+    border-radius: 5px; /* Arrotonda i bordi */
+  }

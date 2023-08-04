@@ -14,9 +14,9 @@
 <body>
     <h1>MangaDB</h1>
 
-    <h2> Hai una nuova serie? <a href="{% url 'add_collection' %}"> Puoi aggiungerla qui</a></h2>
+    <h3> Hai una nuova serie? <a href="{% url 'add_collection' %}"> Puoi aggiungerla qui</a></h3>
 
-    <h3>La tua libreria:</h3>
+    <h2 class="library-heading">La tua libreria:</h2>
     <div class="container">
         <ul class="manga-list">
             {% for collection in collections %}
