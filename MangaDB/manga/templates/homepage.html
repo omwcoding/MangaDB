@@ -17,7 +17,7 @@
     <h3> Hai una nuova serie? <a href="{% url 'add_collection' %}"> Puoi aggiungerla qui</a></h3>
 
     <h2 class="library-heading">La tua libreria:</h2>
-    <div class="container">
+    <div class="manga-container">
         <ul class="manga-list">
             {% for collection in collections %}
                 <li class="manga-item {% if collection.is_favorite %}favorite{% endif %}">

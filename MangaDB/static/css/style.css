@@ -5,9 +5,12 @@ body, h1, h2, h3, p, ul, li {
   }
   
   body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-  }
+}
+
   
   h1 {
     text-align: center;
@@ -25,11 +28,13 @@ body, h1, h2, h3, p, ul, li {
     text-decoration: underline;
   }
   
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+  .manga-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px; /* Aggiunge spazio interno ai lati */
   }
+
   
   h2 {
     margin-top: 30px;
@@ -63,17 +68,18 @@ body, h1, h2, h3, p, ul, li {
   .manga-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Cambio dell'allineamento da "center" a "flex-start" */
+    justify-content: flex-start; 
     list-style: none;
     padding: 0;
   }
 
   .manga-item {
-    flex: 0 0 calc(25% - 20px);
+    width: calc(16.666% - 20px);
     margin: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -83,8 +89,9 @@ body, h1, h2, h3, p, ul, li {
   .manga-cover img {
     width: 100%;
     height: auto;
-    margin-bottom: 10px; /* Aggiunto margine sotto l'immagine */
+    margin-bottom: 5px;
   }
+
 
   .manga-author {
     margin-bottom: 3px;
@@ -168,3 +175,14 @@ body, h1, h2, h3, p, ul, li {
     border: 8px solid #ccc; /* Bordo con colore e spessore */
     border-radius: 5px; /* Arrotonda i bordi */
   }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #666;
+}
