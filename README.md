@@ -10,6 +10,7 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 - [ ] Homepage
 - [X] Favorites collection
 - [X] Insert function
+- [X] Delete function
 - [ ] Search function
 - [X] Update function
 - [ ] Filter function
