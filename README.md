@@ -20,12 +20,16 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 - [ ] Statistics function
 - [ ] Dark mode
 - [ ] Mobile friendly
-- [ ] 
+- [ ] ...
 
 ### Da capire:
 - Trasformare webapp locale in webapp accessibile (hosting?)
 - Pensare a un modo per aggiungere manga in modo più veloce (scraping? da che fonte?)
-- 
+- ...
+
+## BUGS:
+- Modifica di una collezione manga funziona ma rimanda ad una pagina sbagliata
+- ...
  
 ### Istruzioni:
 1. Installare un ambiente virtuale dentro la cartella del progetto
