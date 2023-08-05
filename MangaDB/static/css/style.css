@@ -1,188 +1,194 @@
 /* Reset delle impostazioni predefinite del browser per migliorare la consistenza */
 body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
 }
 
-  
-  h1 {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #3498db;
-    color: #fff;
-  }
-  
-  a {
-    color: #3498db;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .manga-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 10px; /* Aggiunge spazio interno ai lati */
-  }
-
-  
-  h2 {
-    margin-top: 30px;
-    color: #333;
-  }
-  
-  h3 {
-    color: #333;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  img {
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    display: block;
-    margin: 0 auto;
-  }
-
-  .manga-title {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  .manga-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; 
-    list-style: none;
-    padding: 0;
-  }
-
-  .manga-item {
-    width: calc(16.666% - 20px);
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .manga-cover img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 5px;
-  }
-
-
-  .manga-author {
-    margin-bottom: 3px;
-  }
-
-  .manga-info {
-    font-size: 14px;
-    color: #666;
-    margin-top: 10px;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
 
-  .completion span {
-    font-weight: bold;
-    color: #3498db;
-  }
-  
-  /* Aggiungi stili personalizzati al tuo form */
-  .form-field {
-    margin-bottom: 15px;
-  }
+h1 {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #3498db;
+  color: #fff;
+}
 
-  /* Modifica le dimensioni del testo e il font per i campi del form */
-  .form-field select,
-  .form-field input[type="text"],
-  .form-field textarea {
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+a {
+  color: #3498db;
+  text-decoration: none;
+}
 
-  /* Aggiungi stili per i pulsanti */
-  button[type="submit"] {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  /* Aggiungi stili al testo del placeholder */
-  input::placeholder,
-  textarea::placeholder {
-    color: #999;
-  }
+.manga-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 10px;
+}
 
-  .delete-button {
-    background-color: red;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .edit-button {
-  background-color: rgb(21, 255, 0);
+h2 {
+  margin-top: 30px;
+  color: #333;
+}
+
+h3 {
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+img {
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+.manga-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+
+.manga-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+  list-style: none;
+  padding: 0;
+}
+
+.manga-item {
+  width: calc(16.666% - 20px);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.manga-cover img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.manga-author {
+  margin-bottom: 3px;
+}
+
+.manga-info {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.completion span {
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* Aggiungi stili personalizzati al tuo form */
+.form-field {
+  margin-bottom: 15px;
+}
+
+/* Modifica le dimensioni del testo e il font per i campi del form */
+.form-field select,
+.form-field input[type="text"],
+.form-field textarea {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Aggiungi stili per i pulsanti */
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Aggiungi stili al testo del placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+.delete-button {
+  background-color: red;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #007bff;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  }
-  
-  .collection-actions {
-    display: flex; /* Abilita il layout flessibile */
-    gap: 10px; /* Aggiunge uno spazio tra i pulsanti */
 }
 
-  .library-heading {
-    text-align: center; /* Centra orizzontalmente */
-    margin-top: 20px; /* Aggiunge uno spazio sopra l'elemento */
-    font-size: 24px;
+.collection-actions {
+  display: flex;
+  gap: 10px;
+}
 
-    padding: 10px; /* Spaziatura interna */
-    border: 8px solid #ccc; /* Bordo con colore e spessore */
-    border-radius: 5px; /* Arrotonda i bordi */
-  }
+.library-heading {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  padding: 10px;
+  border: 8px solid #ccc;
+  border-radius: 5px;
+}
 
-  footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
-    color: #666;
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
