@@ -27,6 +27,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Struttura e layout delle collezioni */
 .manga-container {
   display: flex;
   flex-wrap: wrap;
@@ -34,6 +35,7 @@ a:hover {
   padding: 0 10px;
 }
 
+/* Titoli e intestazioni */
 h2 {
   margin-top: 30px;
   color: #333;
@@ -43,6 +45,7 @@ h3 {
   color: #333;
 }
 
+/* Elenco puntato */
 ul {
   list-style: none;
 }
@@ -51,6 +54,7 @@ li {
   margin-bottom: 10px;
 }
 
+/* Immagini */
 img {
   border: 1px solid #ccc;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -58,12 +62,14 @@ img {
   margin: 0 auto;
 }
 
+/* Titoli dei manga */
 .manga-title {
   font-weight: bold;
   margin-bottom: 4px;
   font-size: 15px;
 }
 
+/* Elenco di manga */
 .manga-list {
   display: flex;
   flex-wrap: wrap;
@@ -72,6 +78,7 @@ img {
   padding: 0;
 }
 
+/* Singolo manga nell'elenco */
 .manga-item {
   width: calc(16.666% - 20px);
   margin: 10px;
@@ -87,33 +94,37 @@ img {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Copertina del manga */
 .manga-cover img {
   width: 100%;
   height: auto;
   margin-bottom: 5px;
 }
 
+/* Autore del manga */
 .manga-author {
   margin-bottom: 3px;
 }
 
+/* Informazioni del manga */
 .manga-info {
   font-size: 14px;
   color: #666;
   margin-top: 10px;
 }
 
+/* Stile per completamento */
 .completion span {
   font-weight: bold;
   color: #3498db;
 }
 
-/* Aggiungi stili personalizzati al tuo form */
+/* Stili personalizzati per i form */
 .form-field {
   margin-bottom: 15px;
 }
 
-/* Modifica le dimensioni del testo e il font per i campi del form */
+/* Stili per campi di input e textarea */
 .form-field select,
 .form-field input[type="text"],
 .form-field textarea {
@@ -125,7 +136,7 @@ img {
   border-radius: 5px;
 }
 
-/* Aggiungi stili per i pulsanti */
+/* Stili per i pulsanti */
 button[type="submit"] {
   padding: 10px 20px;
   font-size: 16px;
@@ -136,12 +147,13 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-/* Aggiungi stili al testo del placeholder */
+/* Stili per il testo del placeholder */
 input::placeholder,
 textarea::placeholder {
   color: #999;
 }
 
+/* Stili per il pulsante di eliminazione */
 .delete-button {
   background-color: red;
   color: #fff;
@@ -152,6 +164,7 @@ textarea::placeholder {
   cursor: pointer;
 }
 
+/* Stili per il pulsante di modifica */
 .edit-button {
   background-color: #007bff;
   color: white;
@@ -162,11 +175,13 @@ textarea::placeholder {
   cursor: pointer;
 }
 
+/* Layout delle azioni della collezione */
 .collection-actions {
   display: flex;
   gap: 10px;
 }
 
+/* Titolo della libreria */
 .library-heading {
   text-align: center;
   margin-top: 20px;
@@ -176,6 +191,7 @@ textarea::placeholder {
   border-radius: 5px;
 }
 
+/* Footer */
 footer {
   position: fixed;
   bottom: 0;
@@ -187,6 +203,7 @@ footer {
   color: #666;
 }
 
+/* Contenitore principale */
 .container {
   max-width: 800px;
   margin: 0 auto;

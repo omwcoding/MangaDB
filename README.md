@@ -16,7 +16,11 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 - [ ] Filter function
 - [ ] Login function
 - [ ] User function
-- [ ] Wishlist function
+- [ ] Wishlist function (share with friends?)
+- [ ] Statistics function
+- [ ] Dark mode
+- [ ] Mobile friendly
+- [ ] 
 
 ### Da capire:
 - Trasformare webapp locale in webapp accessibile (hosting?)
