@@ -37,8 +37,11 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 2. Attivare l'ambiente virtuale (controllare di essere nella cartella giusta)
 ```
     cd .\MangaDB\
+```
+```
     venv\Scripts\activate
 ```
+
 3. Avvisare il server
 ``` 
     python manage.py runserver
@@ -46,6 +49,8 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 EXTRA: Ricordarsi di effettuare le migrazioni (nel caso di aggiornamenti al db)
 ```
     python manage.py makemigrations
+```
+```
     python manage.py migrate
 ```
 
