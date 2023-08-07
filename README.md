@@ -2,12 +2,8 @@
 Piccolo progetto per la creazione di una webapp in grado di gestire la propria collezione di manga.
 
 ### To-Do
-- [X] Setup Django project
-- [X] Setup Django app
-- [X] Setup Django models
-- [ ] Setup Django views
-- [ ] Organize Django templates (urls, views, templates, static files, html files, ecc)
 - [ ] Homepage
+- [ ] User function (including library, wishlist, statistics, etc.)
 - [X] Favorites collection
 - [X] Insert function
 - [X] Delete function
@@ -15,9 +11,11 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 - [X] Update function
 - [ ] Filter function
 - [ ] Login function
-- [ ] User function
-- [ ] Wishlist function (share with friends?)
-- [ ] Statistics function
+- [ ] Register function
+- [ ] Admin function
+- [ ] ...
+
+### To-Do (extra)
 - [ ] Dark mode
 - [ ] Mobile friendly
 - [ ] ...
@@ -28,7 +26,7 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 - ...
 
 ## BUGS:
-- Modifica di una collezione manga funziona ma rimanda ad una pagina sbagliata
+- Modifica di una collezione rimanda a pagina sbagliata (controllare url, funziona correttamente)
 - ...
  
 ### Istruzioni:
@@ -45,7 +43,7 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 ``` 
     python manage.py runserver
 ```
-4. Ricordarsi di effettuare le migrazioni (nel caso di aggiornamenti al db)
+EXTRA: Ricordarsi di effettuare le migrazioni (nel caso di aggiornamenti al db)
 ```
     python manage.py makemigrations
     python manage.py migrate
