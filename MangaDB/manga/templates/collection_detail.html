@@ -6,7 +6,12 @@
     <div class="collection-details">
         <h1>{{ collection.name }}</h1>
         <img src="{{ collection.image.url }}" alt="{{ collection.name }}" width="150">
-        
+
+        <h2>Preferiti:</h2>
+        <label for="favorite">Preferito:</label>
+        <input type="checkbox" name="favorite" value="1" {% if collection.favorite %}checked{% endif %}>
+        <br>
+        <br>
         <div class="details">
             <p><strong>Completamento:</strong> {{ collection.completion_percentage }}%</p>
             <p><strong>Autore:</strong> {{ collection.author }}</p>
@@ -45,14 +50,10 @@
                 </li>
             {% endfor %}
         </ul>
-        
-        <h2>Preferiti:</h2>
-        <label for="favorite">Preferito:</label>
-        <input type="checkbox" name="favorite" value="1" {% if collection.favorite %}checked{% endif %}>
         <br>
-        <br>
-        <button type="submit">Aggiorna Volumi e Preferiti</button>
     </form>
+    <button type="submit" class="update-button">Aggiorna Volumi e Preferiti</button>
+
 
     <script>
         const toggleButton = document.getElementById("toggle-volumes");

@@ -181,6 +181,12 @@ textarea::placeholder {
   cursor: pointer;
 }
 
+/* Stile bottone di aggiornamento */
+.update-button {
+  display: block;
+  margin: 0 auto;
+}
+
 /* Layout delle azioni della collezione */
 .collection-actions {
   display: flex;
