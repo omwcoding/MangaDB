@@ -10,7 +10,7 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 - [ ] Search function
 - [X] Update function
 - [ ] Filter function
-- [ ] Login function
+- [ ] Login/logout function
 - [ ] Register function
 - [ ] Admin function
 - [ ] ...
