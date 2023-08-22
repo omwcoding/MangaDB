@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MangaDB - Homepage (Mobile)</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mobile_style.css' %}">
+    <style>
+        .favorite {
+            background-color: #ffdb4d;  /* Cambia il colore a tua scelta */
+        }
+        .manga-item {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>MangaDB - Mobile</h1>
+
+    <h2>La tua libreria:</h2>
+    <div class="manga-container">
+        <ul class="manga-list">
+            {% for collection in collections %}
+                <li class="manga-item {% if collection.is_favorite %}favorite{% endif %}">
+                    <a href="{% url 'collection_detail' collection.id %}">
+                        <div class="manga-cover">
+                            <img src="{{ collection.image.url }}" alt="{{ collection.name }}">
+                        </div>
+                        <div class="manga-info">
+                            <p class="manga-title">{{ collection.name }}</p>
+                            <p class="manga-author">{{ collection.author }}</p>
+                            <p class="completion"><span>{{ collection.completion_percentage }}%</span></p>
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
