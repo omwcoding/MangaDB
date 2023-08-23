@@ -16,7 +16,7 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 - [ ] ...
 
 ### To-Do (extra)
-- [ ] Dark mode
+- [X] Dark mode
 - [ ] Mobile friendly
 - [ ] ...
 
