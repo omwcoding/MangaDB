@@ -4,37 +4,104 @@
 <html>
 <head>
     <title>MangaDB - Homepage (Mobile)</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/mobile_style.css' %}">
-    <style>
-        .favorite {
-            background-color: #ffdb4d;  /* Cambia il colore a tua scelta */
-        }
-        .manga-item {
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>MangaDB - Mobile</h1>
+    <style>
+        /* Stili della modalità chiara */
+        .light-mode {
+            background-color: #f0f0f0;
+            color: #333;
+        }
 
-    <h2>La tua libreria:</h2>
-    <div class="manga-container">
-        <ul class="manga-list">
+        /* Stili della modalità scura */
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .card {
+            border: none;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            height: 500px;
+        }
+
+        /* Stile del testo nelle card in modalità scura */
+        .dark-mode .card-title,
+        .dark-mode .card-text{
+            color: #000;
+        }
+
+        .dark-mode .completion {
+            font-weight: bold;
+            color: #3498db
+        }
+
+        .card-title {
+        font-size: 2.5rem; /* Aumenta ulteriormente la dimensione del testo */
+        margin-top: 10px;
+        }
+
+        .card-text {
+            font-size: 1.25rem; /* Aumenta ulteriormente la dimensione del testo */
+        }
+
+        .completion {
+            font-weight: bold;
+            font-size: 1.25rem; /* Aumenta ulteriormente la dimensione del testo */
+            color: #3498db;
+        }
+
+        /* Pulsante per la modalità scura */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+    </style>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
+        }
+    </script>
+
+    <div class="container">
+        <h1 class="text-center mt-4">MangaDB - Mobile</h1>
+
+        <!-- Pulsante per attivare/disattivare la modalità scura -->
+        <button class="btn btn-primary dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+
+        <h2 class="mt-4">La tua libreria:</h2>
+        <div class="row">
             {% for collection in collections %}
-                <li class="manga-item {% if collection.is_favorite %}favorite{% endif %}">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100" style="height: 400px;"> <!-- Aggiungi l'altezza fissa alla card -->
                     <a href="{% url 'collection_detail' collection.id %}">
-                        <div class="manga-cover">
-                            <img src="{{ collection.image.url }}" alt="{{ collection.name }}">
-                        </div>
-                        <div class="manga-info">
-                            <p class="manga-title">{{ collection.name }}</p>
-                            <p class="manga-author">{{ collection.author }}</p>
-                            <p class="completion"><span>{{ collection.completion_percentage }}%</span></p>
-                        </div>
+                        <img src="{{ collection.image.url }}" class="card-img-top" alt="{{ collection.name }}">
                     </a>
-                </li>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ collection.name }}</h5>
+                        <p class="card-text">{{ collection.author }}</p>
+                        <p class="card-text completion">{{ collection.completion_percentage }}%</p>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
-        </ul>
+        </div>
     </div>
+
+
+    <footer>
+        &copy; {{ current_year }} MangaDB. Tutti i diritti riservati.
+    </footer>
 </body>
 </html>
