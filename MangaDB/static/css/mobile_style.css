@@ -1,0 +1,109 @@
+/* Stili della modalità chiara */
+.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Stili della modalità scura */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.card {
+    border: none;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 500px;
+}
+
+/* Stile del testo nelle card in modalità scura */
+.dark-mode .card-title,
+.dark-mode .card-text {
+    color: #000;
+}
+
+.dark-mode .completion {
+    font-weight: bold;
+    color: #3498db;
+}
+
+.card-title {
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+
+.card-text {
+    font-size: 1.25rem;
+}
+
+.completion {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #3498db;
+}
+
+/* Pulsante per la modalità scura */
+.dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+/* Stile della scheda per aggiungere un nuovo manga */
+.add-collection-card {
+    border: none;
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: #f0f0f0; /* Colore di sfondo */
+}
+
+.add-collection-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #3498db;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-collection-text img {
+    width: 50px; /* Dimensione dell'icona */
+    height: 50px;
+    margin-bottom: 0.5rem;
+}
+
+/* Stili per la sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100%;
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+    background-color: #fff;
+    padding: 3rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.show {
+    right: 0;
+}
+
+/* Imposta un margine inferiore e superiore più piccolo */
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Aggiungi spazio tra l'icona e il titolo */
+.page-title {
+    margin-right: 20px;
+}

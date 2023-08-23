@@ -6,86 +6,42 @@
     <title>MangaDB - Homepage (Mobile)</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" href="{% static 'mangadb.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/mobile_style.css' %}">
 </head>
 <body>
-    <style>
-        /* Stili della modalità chiara */
-        .light-mode {
-            background-color: #f0f0f0;
-            color: #333;
-        }
-
-        /* Stili della modalità scura */
-        .dark-mode {
-            background-color: #1a1a1a;
-            color: #fff;
-        }
-
-        .card {
-            border: none;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .card-img-top {
-            object-fit: cover;
-            height: 500px;
-        }
-
-        /* Stile del testo nelle card in modalità scura */
-        .dark-mode .card-title,
-        .dark-mode .card-text{
-            color: #000;
-        }
-
-        .dark-mode .completion {
-            font-weight: bold;
-            color: #3498db
-        }
-
-        .card-title {
-        font-size: 2.5rem; /* Aumenta ulteriormente la dimensione del testo */
-        margin-top: 10px;
-        }
-
-        .card-text {
-            font-size: 1.25rem; /* Aumenta ulteriormente la dimensione del testo */
-        }
-
-        .completion {
-            font-weight: bold;
-            font-size: 1.25rem; /* Aumenta ulteriormente la dimensione del testo */
-            color: #3498db;
-        }
-
-        /* Pulsante per la modalità scura */
-        .dark-mode-toggle {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-        }
-    </style>
-
     <script>
         function toggleDarkMode() {
             const body = document.body;
             body.classList.toggle('dark-mode');
             body.classList.toggle('light-mode');
         }
+
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('show');
+        }
+        /*
+        function toggleFavorite(event) {
+            const mangaItem = event.target.closest('.manga-item');
+            mangaItem.classList.toggle('favorite');
+        }
+        */
     </script>
 
     <div class="container">
-        <h1 class="text-center mt-4">MangaDB - Mobile</h1>
-
-        <!-- Pulsante per attivare/disattivare la modalità scura -->
-        <button class="btn btn-primary dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="text-center mt-4 page-title">MangaDB - Mobile</h1>
+            <button class="btn btn-link" type="button" onclick="toggleSidebar()">
+                <img src="{% static 'settings.ico' %}" alt="Apri Sidebar">
+            </button>
+        </div>
 
         <h2 class="mt-4">La tua libreria:</h2>
         <div class="row">
+            <!-- Schede dei manga -->
             {% for collection in collections %}
             <div class="col-md-6 mb-4">
-                <div class="card h-100" style="height: 400px;"> <!-- Aggiungi l'altezza fissa alla card -->
+                <div class="card h-100" style="height: 400px;">
                     <a href="{% url 'collection_detail' collection.id %}">
                         <img src="{{ collection.image.url }}" class="card-img-top" alt="{{ collection.name }}">
                     </a>
@@ -97,9 +53,34 @@
                 </div>
             </div>
             {% endfor %}
+
+            <!-- Scheda per aggiungere un nuovo manga (sempre l'ultima) -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <a href="{% url 'add_collection' %}">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                            <img src="{% static 'new.ico' %}" class="card-img-top" alt="Aggiungi manga">
+                            <div class="add-collection-text">
+                                Hai una nuova serie? <span>Aggiungila qui</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
+    <div class="sidebar">
+        <button class="btn btn-primary" onclick="toggleDarkMode()">Dark Mode</button>
+        <br> <br> <br>
+        <button class="btn btn-primary" onclick="toggleSidebar()">Chiudi Sidebar</button>
+        <br> <br> <br>
+        <button class="btn btn-primary" onclick="">Holder 1</button>
+        <br> <br> <br>
+        <button class="btn btn-primary" onclick="">Holder 2</button>
+        <br> <br> <br>
+        <!-- Altri pulsanti o impostazioni possono essere aggiunti qui -->
+    </div>
 
     <footer>
         &copy; {{ current_year }} MangaDB. Tutti i diritti riservati.
