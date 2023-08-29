@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render, get_object_or_404
 from django.db.models import F
+import json
 
 from .forms import CollectionForm, AuthorForm, PublisherForm, GenreForm
 from .models import Collection, Author, Publisher, Genre, MangaVolume
@@ -46,14 +47,14 @@ def update_volumes(request, collection_id):
 
         # Gestione del campo 'favorite'
         favorite = request.POST.get('favorite')
-        collection.favorite = favorite == '1'  # Imposta il valore di 'favorite' in base al form
+        print(favorite)
+        collection.favorite = not favorite
+        print(favorite)
         collection.save()
 
         collection.update_completion_percentage()
         
     return redirect('collection_detail', collection_id=collection_id)
-
-
 
 def add_collection(request):
     if request.method == 'POST':

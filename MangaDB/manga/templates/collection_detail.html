@@ -51,7 +51,7 @@
             {% endfor %}
         </ul>
         <!-- Aggiungi un campo nascosto per il campo "favorite" -->
-        <input type="hidden" name="favorite" value="{% if collection.favorite %}1{% else %}0{% endif %}">
+        <input type="hidden" name="favorite" value="{{ collection.favorite }}">
         <br>
         <button type="submit" class="update-button">Aggiorna Volumi e Preferiti</button>
     </form>
