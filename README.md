@@ -27,7 +27,7 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 
 ## BUGS:
 - Modifica di una collezione rimanda a pagina sbagliata (controllare url, funziona correttamente)
-- Pulsante "Aggiorna collezione" non funzionante (si viene rimandati alla pagina senza modifiche effettuate)
+- Pulsante "Aggiorna collezione" non funzionante su "Preferiti" (si viene rimandati alla pagina senza modifiche effettuate)
 - ...
  
 ### Istruzioni:

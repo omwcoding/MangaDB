@@ -47,15 +47,15 @@ def update_volumes(request, collection_id):
 
         # Gestione del campo 'favorite'
         favorite = request.POST.get('favorite')
-        if favorite == '1':
-            collection.favorite = True
-        else:
-            collection.favorite = False
+        print("Favorite:", favorite)  # Stampa il valore del campo "favorite" ricevuto dal form
+        collection.favorite = favorite == '1'
         collection.save()
+        print("Favorite:", favorite)
 
         collection.update_completion_percentage()
         
     return redirect('collection_detail', collection_id=collection_id)
+
 
 def add_collection(request):
     if request.method == 'POST':

@@ -14,7 +14,27 @@
             const body = document.body;
             body.classList.toggle('dark-mode');
             body.classList.toggle('light-mode');
+
+            const darkModeButton = document.getElementById('darkModeButton');
+            if (body.classList.contains('dark-mode')) {
+                darkModeButton.textContent = 'Light Mode';
+                localStorage.setItem('darkMode', 'enabled'); // Salva lo stato nel localStorage
+            } else {
+                darkModeButton.textContent = 'Dark Mode';
+                localStorage.setItem('darkMode', 'disabled'); // Salva lo stato nel localStorage
+            }
         }
+
+        // Verifica lo stato salvato nel localStorage all'avvio della pagina
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedMode = localStorage.getItem('darkMode');
+            const body = document.body;
+
+            if (savedMode === 'enabled') {
+                body.classList.add('dark-mode');
+                document.getElementById('darkModeButton').textContent = 'Light Mode';
+            }
+        });
 
         function toggleSidebar() {
             const sidebar = document.querySelector('.sidebar');
@@ -71,7 +91,7 @@
     </div>
 
     <div class="sidebar">
-        <button class="btn btn-primary" onclick="toggleDarkMode()">Dark Mode</button>
+        <button class="btn btn-primary" id="darkModeButton" onclick="toggleDarkMode()">Dark Mode</button>
         <br> <br> <br>
         <button class="btn btn-primary" onclick="toggleSidebar()">Chiudi Sidebar</button>
         <br> <br> <br>

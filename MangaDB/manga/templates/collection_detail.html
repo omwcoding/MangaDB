@@ -50,9 +50,12 @@
                 </li>
             {% endfor %}
         </ul>
+        <!-- Aggiungi un campo nascosto per il campo "favorite" -->
+        <input type="hidden" name="favorite" value="{% if collection.favorite %}1{% else %}0{% endif %}">
         <br>
         <button type="submit" class="update-button">Aggiorna Volumi e Preferiti</button>
     </form>
+    
 
     <script>
         const toggleButton = document.getElementById("toggle-volumes");
