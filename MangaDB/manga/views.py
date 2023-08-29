@@ -32,7 +32,6 @@ def homepage(request):
     
     return render(request, template_name, {'collections': collections})
 
-
 def update_volumes(request, collection_id):
     if request.method == 'POST':
         collection = get_object_or_404(Collection, id=collection_id)
@@ -47,14 +46,13 @@ def update_volumes(request, collection_id):
 
         # Gestione del campo 'favorite'
         favorite = request.POST.get('favorite')
-        print("Favorite:", favorite)  # Stampa il valore del campo "favorite" ricevuto dal form
-        collection.favorite = favorite == '1'
+        collection.favorite = favorite == '1'  # Imposta il valore di 'favorite' in base al form
         collection.save()
-        print("Favorite:", favorite)
 
         collection.update_completion_percentage()
         
     return redirect('collection_detail', collection_id=collection_id)
+
 
 
 def add_collection(request):
