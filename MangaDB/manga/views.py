@@ -124,7 +124,7 @@ def edit_collection(request, collection_id):
         form = CollectionForm(request.POST, request.FILES, instance=collection)
         if form.is_valid():
             form.save()
-            return redirect('collection_detail.html', collection_id=collection_id)
+            return redirect('collection_detail', collection_id=collection.id)
     else:
         form = CollectionForm(instance=collection)
 
