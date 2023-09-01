@@ -107,3 +107,9 @@
 .page-title {
     margin-right: 20px;
 }
+
+button.btn-link {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+  }
