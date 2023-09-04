@@ -25,7 +25,7 @@ class Genre(models.Model):
 class Collection(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200)
-    description = models.CharField(max_length=5000)
+    description = models.CharField(max_length=5000, null=True, blank=True)
     numberofvolumes = models.IntegerField(default=0)
     year = models.IntegerField(default=0)
     finished = models.BooleanField(default=False)

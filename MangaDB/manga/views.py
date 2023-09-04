@@ -22,9 +22,9 @@ def homepage(request):
     # Check if the user agent indicates a mobile device
     is_mobile = 'Mobile' in user_agent or 'Android' in user_agent
     if is_mobile:
-        template_name = 'mobile_homepage.html'
+        template_name = 'default.html'
     else:
-        template_name = 'desktop_homepage.html'
+        template_name = 'default.html'
     
     collections = Collection.objects.annotate(
         is_favorite=F('favorite')
