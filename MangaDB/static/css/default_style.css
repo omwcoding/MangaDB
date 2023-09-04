@@ -3,3 +3,8 @@
     background-color: yellow; /* Cambia il colore a tuo piacimento */
     color: black; /* Cambia il colore del testo se necessario */
 }
+
+body.dark-mode {
+    background-color: darkslategrey;
+    color: white;
+  }
