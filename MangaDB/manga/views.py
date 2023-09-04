@@ -24,7 +24,7 @@ def homepage(request):
     if is_mobile:
         template_name = 'default.html'
     else:
-        template_name = 'default.html'
+        template_name = 'desktop_homepage.html'
     
     collections = Collection.objects.annotate(
         is_favorite=F('favorite')
@@ -130,3 +130,6 @@ def edit_collection(request, collection_id):
 
     context = {'form': form}
     return render(request, 'edit_collection.html', context)
+
+def support(request):
+    return render(request, 'support.html')

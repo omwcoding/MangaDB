@@ -5,6 +5,61 @@
 }
 
 body.dark-mode {
-    background-color: darkslategrey;
+    background-color: #1a1a1a;
     color: white;
   }
+
+.card {
+    border: none;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 300px;
+}
+
+/* Stile del testo nelle card in modalità scura */
+.dark-mode .card-title,
+.dark-mode .card-text {
+    color: #000;
+}
+
+.dark-mode .completion {
+    font-weight: bold;
+    color: #3498db;
+}
+
+.card-title {
+    font-size: 1rem;
+}
+
+.card-text {
+    font-size: 0.6rem;
+    margin-bottom: 0.25rem;
+}
+
+.completion {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #3498db;
+}
+
+/* Diminuisci il padding inferiore e superiore del container del testo */
+.card-body {
+    padding-top: 0.25rem;
+    padding-bottom: 0rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Aggiungi questa riga */
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.body-content {
+    margin-top: 70px; /* Regola il margine superiore per evitare che il contenuto sia nascosto dalla navbar */
+}
