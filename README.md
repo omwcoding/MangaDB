@@ -47,11 +47,7 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
 ``` 
     python manage.py runserver
 ```
-3.5 (opzionale) Avviare il server per la visione da altri dispositivi connessi alla stessa rete
-    Inserire il proprio IP in ALLOWED_HOSTS nel file settings.py (MangaDB\MangaDB\settings.py)    
-```
-    python manage.py TUOIP:8000 runserver
-```
+
 EXTRA: 
 ! Ricordarsi di effettuare le migrazioni (nel caso di aggiornamenti al db)
 ```
@@ -62,4 +58,9 @@ EXTRA:
 ! Ricordarsi di installare le librerie e dipendenze necessarie !
 ```
     pip install -r requirements.txt
+```
+Avviare il server per la visione da altri dispositivi connessi alla stessa rete
+    Inserire il proprio IP in ALLOWED_HOSTS nel file settings.py (MangaDB\MangaDB\settings.py)    
+```
+    python manage.py TUOIP:8000 runserver
 ```
