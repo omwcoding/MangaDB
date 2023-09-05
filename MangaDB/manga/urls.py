@@ -11,5 +11,6 @@ urlpatterns = [
     path('collections/<int:collection_id>/edit/', views.edit_collection, name='edit_collection'),
     path('collections/<int:collection_id>/delete/', views.delete_collection, name='delete_collection'),
     path('support/', views.support, name='support'),
+    path('profilo/', views.profilo, name='profilo'),
     # Altre URL e viste se necessario
 ]

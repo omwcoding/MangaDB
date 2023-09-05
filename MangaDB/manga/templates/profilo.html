@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/default_style.css' %}">
+    <title>MangaDB - Profilo Utente</title>
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+            <a class="navbar-brand" href="{% url 'homepage' %}">MangaDB</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'add_collection' %}">Aggiungi una collezione</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Profilo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'support' %}">Supporta il progetto</a>
+                    </li>
+                </ul>
+                <button id="dark-mode-button" class="btn btn-primary" data-dark-mode-active="true" onclick="toggleDarkMode()">
+                    Dark Mode
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <!-- Contenuto del profilo utente -->
+        <h2 class="mt-4">Profilo Utente</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{% static 'placeholder.jpg' %}" alt="Immagine Profilo" class="img-fluid rounded-circle">
+            </div>
+            <div class="col-md-8">
+                <h4>Nome Utente</h4>
+                <p>Email: email@example.com</p>
+                <p>Numero di Volumi nella Libreria: 100</p>
+                <p>Serie Preferite: Serie A, Serie B, Serie C</p>
+                <!-- Altri dettagli del profilo -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-4">
+        &copy; {{ current_year }} MangaDB. Tutti i diritti riservati.
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script per la modalità scura -->
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
+    
+            const darkModeButton = document.getElementById('dark-mode-button');
+            if (body.classList.contains('dark-mode')) {
+                darkModeButton.textContent = 'Light Mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                darkModeButton.textContent = 'Dark Mode';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            const body = document.body;
+    
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+                document.getElementById('dark-mode-button').textContent = 'Light Mode';
+            }
+        });
+    </script>
+</body>
+</html>

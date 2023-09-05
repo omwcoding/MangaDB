@@ -133,3 +133,6 @@ def edit_collection(request, collection_id):
 
 def support(request):
     return render(request, 'support.html')
+
+def profilo(request):
+    return render(request, 'profilo.html')
