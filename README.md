@@ -43,15 +43,19 @@ Piccolo progetto per la creazione di una webapp in grado di gestire la propria c
     venv\Scripts\activate
 ```
 
-3. Avvisare il server
+3. Avviare il server
 ``` 
     python manage.py runserver
 ```
-EXTRA: Ricordarsi di effettuare le migrazioni (nel caso di aggiornamenti al db)
+3.5 (opzionale) Avviare il server per la visione da altri dispositivi connessi alla stessa rete
+    Inserire il proprio IP in ALLOWED_HOSTS nel file settings.py (MangaDB\MangaDB\settings.py)    
+```
+    python manage.py TUOIP:8000 runserver
+```
+EXTRA: 
+! Ricordarsi di effettuare le migrazioni (nel caso di aggiornamenti al db)
 ```
     python manage.py makemigrations
-```
-```
     python manage.py migrate
 ```
 
