@@ -1,4 +1,4 @@
-MangaDB\venv
-MangaDB\manga\__pycache__
-MangaDB\manga\migrations\__pycache__
-MangaDB\MangaDB\__pycache__
+MangaDB\venv\
+MangaDB\manga\__pycache__\
+MangaDB\manga\migrations\__pycache__\
+MangaDB\MangaDB\__pycache__\
