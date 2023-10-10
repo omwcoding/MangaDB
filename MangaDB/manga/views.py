@@ -17,20 +17,12 @@ def manga_volume_list(request):
     return render(request, 'manga_volume_list.html', {'manga_volumes': manga_volumes})
 
 def homepage(request):
-    user_agent = request.META.get('HTTP_USER_AGENT', '')
-    
-    # Check if the user agent indicates a mobile device
-    is_mobile = 'Mobile' in user_agent or 'Android' in user_agent
-    if is_mobile:
-        template_name = 'default.html'
-    else:
-        template_name = 'desktop_homepage.html'
-    
+
     collections = Collection.objects.annotate(
         is_favorite=F('favorite')
     ).order_by('-is_favorite', 'name')
     
-    return render(request, template_name, {'collections': collections})
+    return render(request, 'default.html', {'collections': collections})
 
 def update_volumes(request, collection_id):
     if request.method == 'POST':
@@ -46,6 +38,7 @@ def update_volumes(request, collection_id):
 
         # Gestione del campo 'favorite'
         favorite = request.POST.get('favorite')
+        print(favorite) # stampa il valore di 'favorite' per debug
         if favorite is None:
             collection.favorite = False
         elif favorite == '1':
